@@ -1,0 +1,1637 @@
+{
+  "scope": "Fill remaining metric tables to ten available options, preserving the earlier price-refresh audit.",
+  "price_date_timezone": "America/Los_Angeles",
+  "new_options": 49,
+  "updated_existing_options": 3,
+  "candidates": [
+    {
+      "option": {
+        "category": "cpu",
+        "condition": "new",
+        "vendor": "AMD",
+        "model": "Ryzen 5 5600 (100-100000927BOX)",
+        "memory_gb": "",
+        "bandwidth_gbs": "51.2",
+        "price_usd": "100.98",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Available; active Add to cart; US delivery",
+        "source": "https://www.newegg.com/amd-ryzen-5-5000-series-ryzen-5-5600-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113736 https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-5-5600.html",
+        "notes": "Boxed processor with Wraith Stealth cooler; RAM and motherboard excluded. Theoretical maximum: two 64-bit channels at DDR4-3200: 51.2 GB/s; requires compatible RAM and board. Seller: Global Electronic Treasure Store. Live browser checked 2026-10-23T04:58:06.236Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 39.99; pre-tax delivered total USD 140.97 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Global Electronic Treasure Store",
+        "sku_or_variant": "Ryzen 5 5600 (100-100000927BOX)",
+        "retrieved_at": "2026-10-23T04:58:06.236Z",
+        "price_url": "https://www.newegg.com/amd-ryzen-5-5000-series-ryzen-5-5600-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113736",
+        "stock_url": "https://www.newegg.com/amd-ryzen-5-5000-series-ryzen-5-5600-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113736",
+        "spec_urls": [
+          "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-5-5600.html"
+        ],
+        "shipping_usd": 39.99,
+        "delivered_total_usd": 140.97,
+        "price_and_stock_observation": "USD 100.98; new; Available; active Add to cart; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu",
+        "condition": "new",
+        "vendor": "AMD",
+        "model": "Ryzen 7 5700X (100-100000926WOZ)",
+        "memory_gb": "",
+        "bandwidth_gbs": "51.2",
+        "price_usd": "178",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Available; active Add to cart; US delivery",
+        "source": "https://www.newegg.com/p/274-000M-001Z8 https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-7-5700x.html",
+        "notes": "Processor only; RAM, motherboard and cooling excluded. Theoretical maximum: two 64-bit channels at DDR4-3200: 51.2 GB/s; requires compatible RAM and board. International version; listing warranty terms apply. Seller: Global Electronic Treasure Store. Live browser checked 2026-10-23T04:58:07.722Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 39.99; pre-tax delivered total USD 217.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Global Electronic Treasure Store",
+        "sku_or_variant": "Ryzen 7 5700X (100-100000926WOZ)",
+        "retrieved_at": "2026-10-23T04:58:07.722Z",
+        "price_url": "https://www.newegg.com/p/274-000M-001Z8",
+        "stock_url": "https://www.newegg.com/p/274-000M-001Z8",
+        "spec_urls": [
+          "https://www.amd.com/en/support/downloads/drivers.html/processors/ryzen/ryzen-5000-series/amd-ryzen-7-5700x.html"
+        ],
+        "shipping_usd": 39.99,
+        "delivered_total_usd": 217.99,
+        "price_and_stock_observation": "USD 178.00; new; Available; active Add to cart; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu",
+        "condition": "new",
+        "vendor": "AMD",
+        "model": "Ryzen 9 5900X (OEM small box)",
+        "memory_gb": "",
+        "bandwidth_gbs": "51.2",
+        "price_usd": "231.42",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Available; active Add to cart; US delivery",
+        "source": "https://www.newegg.com/amd-ryzen-9-5900x-ryzen-9-5000-series/p/274-000M-001X9 https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-9-5900x.html https://www.asus.com/us/motherboards-components/motherboards/proart/proart-x570-creator-wifi/techspec/",
+        "notes": "Processor only; RAM, motherboard and cooling excluded. Theoretical maximum: two 64-bit channels at DDR4-3200: 51.2 GB/s; requires compatible RAM and board. Seller: Infinite Energypmax Co., Limited. Live browser checked 2026-10-23T04:58:09.189Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 29.99; pre-tax delivered total USD 261.41 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Infinite Energypmax Co., Limited",
+        "sku_or_variant": "Ryzen 9 5900X (OEM small box)",
+        "retrieved_at": "2026-10-23T04:58:09.189Z",
+        "price_url": "https://www.newegg.com/amd-ryzen-9-5900x-ryzen-9-5000-series/p/274-000M-001X9",
+        "stock_url": "https://www.newegg.com/amd-ryzen-9-5900x-ryzen-9-5000-series/p/274-000M-001X9",
+        "spec_urls": [
+          "https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-9-5900x.html",
+          "https://www.asus.com/us/motherboards-components/motherboards/proart/proart-x570-creator-wifi/techspec/"
+        ],
+        "shipping_usd": 29.99,
+        "delivered_total_usd": 261.40999999999997,
+        "price_and_stock_observation": "USD 231.42; new; Available; active Add to cart; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu",
+        "condition": "used",
+        "vendor": "AMD",
+        "model": "Ryzen 9 5900X (100-100000061WOF)",
+        "memory_gb": "",
+        "bandwidth_gbs": "51.2",
+        "price_usd": "269",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Available; active Add to cart; US delivery",
+        "source": "https://www.newegg.com/amd-ryzen-9-5000-series-ryzen-9-5900x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113664 https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-9-5900x.html https://www.asus.com/us/motherboards-components/motherboards/proart/proart-x570-creator-wifi/techspec/",
+        "notes": "Processor only; RAM, motherboard and cooling excluded. Theoretical maximum: two 64-bit channels at DDR4-3200: 51.2 GB/s; requires compatible RAM and board. Exact condition: USED - LIKE NEW. Seller: Bolt Electronics. Live browser checked 2026-10-23T04:58:10.818Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 269.00 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Bolt Electronics",
+        "sku_or_variant": "Ryzen 9 5900X (100-100000061WOF)",
+        "retrieved_at": "2026-10-23T04:58:10.818Z",
+        "price_url": "https://www.newegg.com/amd-ryzen-9-5000-series-ryzen-9-5900x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113664",
+        "stock_url": "https://www.newegg.com/amd-ryzen-9-5000-series-ryzen-9-5900x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113664",
+        "spec_urls": [
+          "https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-9-5900x.html",
+          "https://www.asus.com/us/motherboards-components/motherboards/proart/proart-x570-creator-wifi/techspec/"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 269,
+        "price_and_stock_observation": "USD 269.00; used; Available; active Add to cart; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu",
+        "condition": "new",
+        "vendor": "AMD",
+        "model": "Ryzen 9 9950X (100-100001277WOF)",
+        "memory_gb": "",
+        "bandwidth_gbs": "89.6",
+        "price_usd": "539",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Available; active Add to cart; US delivery",
+        "source": "https://www.newegg.com/amd-ryzen-9-9000-series-ryzen-9-9950x-granite-ridge-socket-am5-desktop-cpu-processor/p/N82E16819113841 https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x.html",
+        "notes": "Processor only; RAM, motherboard and cooling excluded. Theoretical maximum: two 64-bit channels at DDR5-5600: 89.6 GB/s; requires compatible RAM and board. Seller: Newegg. Live browser checked 2026-10-23T04:58:12.156Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 539.00 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Newegg",
+        "sku_or_variant": "Ryzen 9 9950X (100-100001277WOF)",
+        "retrieved_at": "2026-10-23T04:58:12.156Z",
+        "price_url": "https://www.newegg.com/amd-ryzen-9-9000-series-ryzen-9-9950x-granite-ridge-socket-am5-desktop-cpu-processor/p/N82E16819113841",
+        "stock_url": "https://www.newegg.com/amd-ryzen-9-9000-series-ryzen-9-9950x-granite-ridge-socket-am5-desktop-cpu-processor/p/N82E16819113841",
+        "spec_urls": [
+          "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x.html"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 539,
+        "price_and_stock_observation": "USD 539.00; new; Available; active Add to cart; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "5 1GB",
+        "memory_gb": "1",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "49.5",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "In stock",
+        "source": "https://www.adafruit.com/product/6447 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "New Raspberry Pi 5 1GB; installed RAM counted once. 32-bit LPDDR4X-4267: 4267 x 4 / 1000 = 17.068 GB/s theoretical. Power supply, cooling and storage excluded unless explicitly bundled. Seller: Adafruit. Live browser checked 2026-10-23T05:01:10.603Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "5 1GB",
+        "retrieved_at": "2026-10-23T05:01:10.603Z",
+        "price_url": "https://www.adafruit.com/product/6447",
+        "stock_url": "https://www.adafruit.com/product/6447",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 49.50; new; In stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "5 4GB",
+        "memory_gb": "4",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "130",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "In stock",
+        "source": "https://www.adafruit.com/product/5812 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "New Raspberry Pi 5 4GB; installed RAM counted once. 32-bit LPDDR4X-4267: 4267 x 4 / 1000 = 17.068 GB/s theoretical. Power supply, cooling and storage excluded unless explicitly bundled. Seller: Adafruit. Live browser checked 2026-10-23T05:01:42.506Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "5 4GB",
+        "retrieved_at": "2026-10-23T05:01:42.506Z",
+        "price_url": "https://www.adafruit.com/product/5812",
+        "stock_url": "https://www.adafruit.com/product/5812",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 130.00; new; In stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "5 8GB",
+        "memory_gb": "8",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "200",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "In stock",
+        "source": "https://www.adafruit.com/product/5813 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "New Raspberry Pi 5 8GB; installed RAM counted once. 32-bit LPDDR4X-4267: 4267 x 4 / 1000 = 17.068 GB/s theoretical. Power supply, cooling and storage excluded unless explicitly bundled. Seller: Adafruit. Live browser checked 2026-10-23T05:01:43.032Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "5 8GB",
+        "retrieved_at": "2026-10-23T05:01:43.032Z",
+        "price_url": "https://www.adafruit.com/product/5813",
+        "stock_url": "https://www.adafruit.com/product/5813",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 200.00; new; In stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "5 16GB",
+        "memory_gb": "16",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "350",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "In stock",
+        "source": "https://www.adafruit.com/product/6125 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "New Raspberry Pi 5 16GB; installed RAM counted once. 32-bit LPDDR4X-4267: 4267 x 4 / 1000 = 17.068 GB/s theoretical. Power supply, cooling and storage excluded unless explicitly bundled. Seller: Adafruit. Live browser checked 2026-10-23T05:01:10.071Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "5 16GB",
+        "retrieved_at": "2026-10-23T05:01:10.071Z",
+        "price_url": "https://www.adafruit.com/product/6125",
+        "stock_url": "https://www.adafruit.com/product/6125",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 350.00; new; In stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "500 8GB keyboard computer",
+        "memory_gb": "8",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "216",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "27 in stock",
+        "source": "https://www.adafruit.com/product/6111 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/products/raspberry-pi-500/",
+        "notes": "New Raspberry Pi 500 8GB keyboard computer; installed RAM counted once. 32-bit LPDDR4X-4267: 4267 x 4 / 1000 = 17.068 GB/s theoretical. Keyboard/enclosure and 32GB microSD included; power supply and display excluded. Seller: Adafruit. Live browser checked 2026-10-23T05:01:43.593Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "500 8GB keyboard computer",
+        "retrieved_at": "2026-10-23T05:01:43.593Z",
+        "price_url": "https://www.adafruit.com/product/6111",
+        "stock_url": "https://www.adafruit.com/product/6111",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/products/raspberry-pi-500/"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 216.00; new; 27 in stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "4 Model B 4GB",
+        "memory_gb": "4",
+        "bandwidth_gbs": "8",
+        "price_usd": "120",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "In stock",
+        "source": "https://www.adafruit.com/product/4296 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf",
+        "notes": "New Raspberry Pi 4 Model B 4GB; installed RAM counted once. 32-bit LPDDR4 interface at effective 2000 MT/s: 8 GB/s theoretical; use operating transfer rate rather than 3200-rated DRAM. Power supply, cooling and storage excluded unless explicitly bundled. Seller: Adafruit. Live browser checked 2026-10-23T05:01:44.028Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "4 Model B 4GB",
+        "retrieved_at": "2026-10-23T05:01:44.028Z",
+        "price_url": "https://www.adafruit.com/product/4296",
+        "stock_url": "https://www.adafruit.com/product/4296",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/documentation/computers/processors.html",
+          "https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 120.00; new; In stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "new",
+        "vendor": "Raspberry Pi",
+        "model": "4 Model B 8GB",
+        "memory_gb": "8",
+        "bandwidth_gbs": "8",
+        "price_usd": "190",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "71 in stock",
+        "source": "https://www.adafruit.com/product/4564 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf",
+        "notes": "New Raspberry Pi 4 Model B 8GB; installed RAM counted once. 32-bit LPDDR4 interface at effective 2000 MT/s: 8 GB/s theoretical; use operating transfer rate rather than 3200-rated DRAM. Power supply, cooling and storage excluded unless explicitly bundled. Seller: Adafruit. Live browser checked 2026-10-23T05:01:44.555Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping not quoted without checkout; excluded from price."
+      },
+      "evidence": {
+        "seller": "Adafruit",
+        "sku_or_variant": "4 Model B 8GB",
+        "retrieved_at": "2026-10-23T05:01:44.555Z",
+        "price_url": "https://www.adafruit.com/product/4564",
+        "stock_url": "https://www.adafruit.com/product/4564",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/documentation/computers/processors.html",
+          "https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+        ],
+        "shipping_usd": null,
+        "delivered_total_usd": null,
+        "price_and_stock_observation": "USD 190.00; new; 71 in stock; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US retailer; shipping quote not obtained",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "5 4GB",
+        "memory_gb": "4",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "129.95",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "2 available",
+        "source": "https://www.ebay.com/itm/227579271911 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "Item only; seller states great working condition. 32-bit LPDDR4X-4267: 17.068GB/s theoretical. Seller: Baily Store. Live browser checked 2026-10-23T05:02:32.541Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 129.95 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Baily Store",
+        "sku_or_variant": "5 4GB",
+        "retrieved_at": "2026-10-23T05:02:32.541Z",
+        "price_url": "https://www.ebay.com/itm/227579271911",
+        "stock_url": "https://www.ebay.com/itm/227579271911",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 129.95,
+        "price_and_stock_observation": "USD 129.95; used; 2 available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "5 8GB",
+        "memory_gb": "8",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "175",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/940026235340 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "Used 8GB board; storage capacity not counted as RAM. 32-bit LPDDR4X-4267: 17.068GB/s theoretical. Seller: techgimmickllc. Live browser checked 2026-10-23T05:02:06.207Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 6.39; pre-tax delivered total USD 181.39 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "techgimmickllc",
+        "sku_or_variant": "5 8GB",
+        "retrieved_at": "2026-10-23T05:02:06.207Z",
+        "price_url": "https://www.ebay.com/itm/940026235340",
+        "stock_url": "https://www.ebay.com/itm/940026235340",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": 6.39,
+        "delivered_total_usd": 181.39,
+        "price_and_stock_observation": "USD 175.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "5 16GB",
+        "memory_gb": "16",
+        "bandwidth_gbs": "17.068",
+        "price_usd": "304.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Last one available",
+        "source": "https://www.ebay.com/itm/227452328355 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+        "notes": "Board only; seller states excellent working condition. 32-bit LPDDR4X-4267: 17.068GB/s theoretical. Seller: Baily Store. Live browser checked 2026-10-23T05:02:47.085Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 304.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Baily Store",
+        "sku_or_variant": "5 16GB",
+        "retrieved_at": "2026-10-23T05:02:47.085Z",
+        "price_url": "https://www.ebay.com/itm/227452328355",
+        "stock_url": "https://www.ebay.com/itm/227452328355",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 304.99,
+        "price_and_stock_observation": "USD 304.99; used; Last one available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "4 Model B 1GB / case, PSU and 64GB microSD",
+        "memory_gb": "1",
+        "bandwidth_gbs": "8",
+        "price_usd": "70",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/267817000993 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf",
+        "notes": "Case, power supply and Samsung 64GB microSD included; only 1GB RAM counted. 32-bit LPDDR4 at effective 2000 MT/s: 8GB/s theoretical. Seller: johnreeder. Live browser checked 2026-10-23T05:02:35.860Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 10.15; pre-tax delivered total USD 80.15 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "johnreeder",
+        "sku_or_variant": "4 Model B 1GB / case, PSU and 64GB microSD",
+        "retrieved_at": "2026-10-23T05:02:35.860Z",
+        "price_url": "https://www.ebay.com/itm/267817000993",
+        "stock_url": "https://www.ebay.com/itm/267817000993",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/documentation/computers/processors.html",
+          "https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+        ],
+        "shipping_usd": 10.15,
+        "delivered_total_usd": 80.15,
+        "price_and_stock_observation": "USD 70.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "4 Model B 2GB / 32GB microSD",
+        "memory_gb": "2",
+        "bandwidth_gbs": "8",
+        "price_usd": "60",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Last one available",
+        "source": "https://www.ebay.com/itm/840048861680 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf",
+        "notes": "2GB installed RAM; 32GB Extreme Pro microSD is storage. 32-bit LPDDR4 at effective 2000 MT/s: 8GB/s theoretical. Seller: stevecooch. Live browser checked 2026-10-23T05:02:37.416Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 8.29; pre-tax delivered total USD 68.29 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "stevecooch",
+        "sku_or_variant": "4 Model B 2GB / 32GB microSD",
+        "retrieved_at": "2026-10-23T05:02:37.416Z",
+        "price_url": "https://www.ebay.com/itm/840048861680",
+        "stock_url": "https://www.ebay.com/itm/840048861680",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/documentation/computers/processors.html",
+          "https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+        ],
+        "shipping_usd": 8.29,
+        "delivered_total_usd": 68.28999999999999,
+        "price_and_stock_observation": "USD 60.00; used; Last one available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "4 Model B 4GB",
+        "memory_gb": "4",
+        "bandwidth_gbs": "8",
+        "price_usd": "79",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "44 available",
+        "source": "https://www.ebay.com/itm/920052149292 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf",
+        "notes": "Used board; 4GB RAM. 32-bit LPDDR4 at effective 2000 MT/s: 8GB/s theoretical. Seller: chcol_501687. Live browser checked 2026-10-23T05:02:39.115Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 79.00 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "chcol_501687",
+        "sku_or_variant": "4 Model B 4GB",
+        "retrieved_at": "2026-10-23T05:02:39.115Z",
+        "price_url": "https://www.ebay.com/itm/920052149292",
+        "stock_url": "https://www.ebay.com/itm/920052149292",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/documentation/computers/processors.html",
+          "https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 79,
+        "price_and_stock_observation": "USD 79.00; used; 44 available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "embedded",
+        "condition": "used",
+        "vendor": "Raspberry Pi",
+        "model": "4 Model B 8GB / 32GB microSD",
+        "memory_gb": "8",
+        "bandwidth_gbs": "8",
+        "price_usd": "75",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/820267849121 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf",
+        "notes": "Used 8GB board with 32GB Samsung EVO Plus microSD; storage excluded from RAM. 32-bit LPDDR4 at effective 2000 MT/s: 8GB/s theoretical. Seller: colman.kaden. Live browser checked 2026-10-23T05:02:40.739Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 5.80; pre-tax delivered total USD 80.80 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "colman.kaden",
+        "sku_or_variant": "4 Model B 8GB / 32GB microSD",
+        "retrieved_at": "2026-10-23T05:02:40.739Z",
+        "price_url": "https://www.ebay.com/itm/820267849121",
+        "stock_url": "https://www.ebay.com/itm/820267849121",
+        "spec_urls": [
+          "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+          "https://www.raspberrypi.com/documentation/computers/processors.html",
+          "https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+        ],
+        "shipping_usd": 5.8,
+        "delivered_total_usd": 80.8,
+        "price_and_stock_observation": "USD 75.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "used",
+        "vendor": "Samsung",
+        "model": "M393A4K40BB2-CTD7Q 32GB (1x32GB DDR4-2666 RDIMM)",
+        "memory_gb": "32",
+        "bandwidth_gbs": "21.328",
+        "price_usd": "180",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/287667004372",
+        "notes": "One ECC registered DIMM; exact module MPN and capacity identified in listing. Single 64-bit payload channel x 2666MT/s x8bytes /1000 = 21.328GB/s theoretical. ECC bits excluded; requires compatible server board and CPU. Seller: Dynamic IT Hardware. Live browser checked 2026-10-23T05:03:40.173Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 180.00 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Dynamic IT Hardware",
+        "sku_or_variant": "M393A4K40BB2-CTD7Q 32GB (1x32GB DDR4-2666 RDIMM)",
+        "retrieved_at": "2026-10-23T05:03:40.173Z",
+        "price_url": "https://www.ebay.com/itm/287667004372",
+        "stock_url": "https://www.ebay.com/itm/287667004372",
+        "spec_urls": [],
+        "shipping_usd": 0,
+        "delivered_total_usd": 180,
+        "price_and_stock_observation": "USD 180.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "used",
+        "vendor": "SK hynix",
+        "model": "HMA82GR7AFR8N-VK 16GB (1x16GB DDR4-2666 RDIMM)",
+        "memory_gb": "16",
+        "bandwidth_gbs": "21.328",
+        "price_usd": "69.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "4 available",
+        "source": "https://www.ebay.com/itm/880032712301",
+        "notes": "One ECC registered DIMM; exact module MPN and capacity identified in listing. Single 64-bit payload channel x 2666MT/s x8bytes /1000 = 21.328GB/s theoretical. ECC bits excluded; requires compatible server board and CPU. Seller: Bizliq2. Live browser checked 2026-10-23T05:03:41.770Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 69.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Bizliq2",
+        "sku_or_variant": "HMA82GR7AFR8N-VK 16GB (1x16GB DDR4-2666 RDIMM)",
+        "retrieved_at": "2026-10-23T05:03:41.770Z",
+        "price_url": "https://www.ebay.com/itm/880032712301",
+        "stock_url": "https://www.ebay.com/itm/880032712301",
+        "spec_urls": [],
+        "shipping_usd": 0,
+        "delivered_total_usd": 69.99,
+        "price_and_stock_observation": "USD 69.99; used; 4 available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "used",
+        "vendor": "Samsung",
+        "model": "M393A2K43BB1-CRC0Y 16GB (1x16GB DDR4-2400 RDIMM)",
+        "memory_gb": "16",
+        "bandwidth_gbs": "19.2",
+        "price_usd": "70",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/117342549494",
+        "notes": "One ECC registered DIMM; exact module MPN and capacity identified in listing. Single 64-bit payload channel x 2400MT/s x8bytes /1000 = 19.2GB/s theoretical. ECC bits excluded; requires compatible server board and CPU. Seller: lve4him247. Live browser checked 2026-10-23T05:03:43.120Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 6.05; pre-tax delivered total USD 76.05 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "lve4him247",
+        "sku_or_variant": "M393A2K43BB1-CRC0Y 16GB (1x16GB DDR4-2400 RDIMM)",
+        "retrieved_at": "2026-10-23T05:03:43.120Z",
+        "price_url": "https://www.ebay.com/itm/117342549494",
+        "stock_url": "https://www.ebay.com/itm/117342549494",
+        "spec_urls": [],
+        "shipping_usd": 6.05,
+        "delivered_total_usd": 76.05,
+        "price_and_stock_observation": "USD 70.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "used",
+        "vendor": "Samsung",
+        "model": "M393B2G70DB0-YK0 16GB (1x16GB DDR3-1600 RDIMM)",
+        "memory_gb": "16",
+        "bandwidth_gbs": "12.8",
+        "price_usd": "15.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/168698121305",
+        "notes": "One ECC registered DIMM; exact module MPN and capacity identified in listing. Single 64-bit payload channel x 1600MT/s x8bytes /1000 = 12.8GB/s theoretical. ECC bits excluded; requires compatible server board and CPU. Seller: Maven_Technologies. Live browser checked 2026-10-23T05:04:08.371Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 15.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Maven_Technologies",
+        "sku_or_variant": "M393B2G70DB0-YK0 16GB (1x16GB DDR3-1600 RDIMM)",
+        "retrieved_at": "2026-10-23T05:04:08.371Z",
+        "price_url": "https://www.ebay.com/itm/168698121305",
+        "stock_url": "https://www.ebay.com/itm/168698121305",
+        "spec_urls": [],
+        "shipping_usd": 0,
+        "delivered_total_usd": 15.99,
+        "price_and_stock_observation": "USD 15.99; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "used",
+        "vendor": "SK hynix",
+        "model": "HMA84GR7MFR4N-UH 32GB (1x32GB DDR4-2400 RDIMM)",
+        "memory_gb": "32",
+        "bandwidth_gbs": "19.2",
+        "price_usd": "149.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "2 available",
+        "source": "https://www.ebay.com/itm/960076557785",
+        "notes": "One ECC registered DIMM; exact module MPN and capacity identified in listing. Single 64-bit payload channel x 2400MT/s x8bytes /1000 = 19.2GB/s theoretical. ECC bits excluded; requires compatible server board and CPU. Seller: Potential Electronics. Live browser checked 2026-10-23T05:03:46.295Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 149.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Potential Electronics",
+        "sku_or_variant": "HMA84GR7MFR4N-UH 32GB (1x32GB DDR4-2400 RDIMM)",
+        "retrieved_at": "2026-10-23T05:03:46.295Z",
+        "price_url": "https://www.ebay.com/itm/960076557785",
+        "stock_url": "https://www.ebay.com/itm/960076557785",
+        "spec_urls": [],
+        "shipping_usd": 0,
+        "delivered_total_usd": 149.99,
+        "price_and_stock_observation": "USD 149.99; used; 2 available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "used",
+        "vendor": "SK hynix",
+        "model": "HMA42GR7MFR4N-TF 16GB (1x16GB DDR4-2133 RDIMM)",
+        "memory_gb": "16",
+        "bandwidth_gbs": "17.064",
+        "price_usd": "49.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "2 available",
+        "source": "https://www.ebay.com/itm/800826563201",
+        "notes": "One ECC registered DIMM; exact module MPN and capacity identified in listing. Single 64-bit payload channel x 2133MT/s x8bytes /1000 = 17.064GB/s theoretical. ECC bits excluded; requires compatible server board and CPU. Seller: PayMore Rockville. Live browser checked 2026-10-23T05:03:56.227Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 49.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "PayMore Rockville",
+        "sku_or_variant": "HMA42GR7MFR4N-TF 16GB (1x16GB DDR4-2133 RDIMM)",
+        "retrieved_at": "2026-10-23T05:03:56.227Z",
+        "price_url": "https://www.ebay.com/itm/800826563201",
+        "stock_url": "https://www.ebay.com/itm/800826563201",
+        "spec_urls": [],
+        "shipping_usd": 0,
+        "delivered_total_usd": 49.99,
+        "price_and_stock_observation": "USD 49.99; used; 2 available; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "ddr",
+        "condition": "new",
+        "vendor": "Corsair",
+        "model": "Vengeance RGB CMH64GX5M2D6000Z40 64GB (2x32GB DDR5-6000)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "96",
+        "price_usd": "1049.99",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Available; active Add to cart; US delivery",
+        "source": "https://www.newegg.com/corsair-vengeance-rgb-64gb-2-x-32gb-ddr5-6000-pc5-48000-cas-latency-cl40-desktop-memory-gray/p/N82E16820982287 https://www.corsair.com/us/en/p/memory/cmh64gx5m2d6000z40/vengeance-rgb-64gb-2x32gb-ddr5-dram-6000mts-cl40-amd-expo-intel-xmp-memory-kit-cmh64gx5m2d6000z40",
+        "notes": "New complete2x32GB kit; DDR5-6000 CL40 EXPO profile. Two independent64-bit channels x6000MT/s x8 /1000 =96GB/s theoretical. Requires compatible CPU/board and rated memory profile; DDR5 subchannels do not double payload width. Seller: Newegg. Live browser checked 2026-10-23T05:04:29.002Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 1049.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Newegg",
+        "sku_or_variant": "Vengeance RGB CMH64GX5M2D6000Z40 64GB (2x32GB DDR5-6000)",
+        "retrieved_at": "2026-10-23T05:04:29.002Z",
+        "price_url": "https://www.newegg.com/corsair-vengeance-rgb-64gb-2-x-32gb-ddr5-6000-pc5-48000-cas-latency-cl40-desktop-memory-gray/p/N82E16820982287",
+        "stock_url": "https://www.newegg.com/corsair-vengeance-rgb-64gb-2-x-32gb-ddr5-6000-pc5-48000-cas-latency-cl40-desktop-memory-gray/p/N82E16820982287",
+        "spec_urls": [
+          "https://www.corsair.com/us/en/p/memory/cmh64gx5m2d6000z40/vengeance-rgb-64gb-2x32gb-ddr5-dram-6000mts-cl40-amd-expo-intel-xmp-memory-kit-cmh64gx5m2d6000z40"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 1049.99,
+        "price_and_stock_observation": "USD 1049.99; new; Available; active Add to cart; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "gpu_system",
+        "condition": "new",
+        "vendor": "Apple",
+        "model": "Mac mini M4 24GB / 512GB",
+        "memory_gb": "24",
+        "bandwidth_gbs": "120",
+        "price_usd": "1079",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/147600995653 https://support.apple.com/en-us/121555",
+        "notes": "Complete system with 24GB installed unified memory and stated SSD; shared CPU/GPU memory counted once. Apple advertised 120 GB/s unified memory bandwidth.  Seller: Tech Depot Shop. Live browser checked 2026-10-23T05:05:19.782Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 1079.00 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Tech Depot Shop",
+        "sku_or_variant": "Mac mini M4 24GB / 512GB",
+        "retrieved_at": "2026-10-23T05:05:19.782Z",
+        "price_url": "https://www.ebay.com/itm/147600995653",
+        "stock_url": "https://www.ebay.com/itm/147600995653",
+        "spec_urls": [
+          "https://support.apple.com/en-us/121555"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 1079,
+        "price_and_stock_observation": "USD 1079.00; new; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "gpu_system",
+        "condition": "new",
+        "vendor": "Apple",
+        "model": "Mac mini M4 Pro 48GB / 1TB (14-core CPU, 20-core GPU)",
+        "memory_gb": "48",
+        "bandwidth_gbs": "273",
+        "price_usd": "2699.99",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/298537663860 https://support.apple.com/en-us/121555",
+        "notes": "Complete system with 48GB installed unified memory and stated SSD; shared CPU/GPU memory counted once. Apple advertised 273 GB/s unified memory bandwidth.  Seller: Custom Macs And More. Live browser checked 2026-10-23T05:05:21.415Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 2699.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "Custom Macs And More",
+        "sku_or_variant": "Mac mini M4 Pro 48GB / 1TB (14-core CPU, 20-core GPU)",
+        "retrieved_at": "2026-10-23T05:05:21.415Z",
+        "price_url": "https://www.ebay.com/itm/298537663860",
+        "stock_url": "https://www.ebay.com/itm/298537663860",
+        "spec_urls": [
+          "https://support.apple.com/en-us/121555"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 2699.99,
+        "price_and_stock_observation": "USD 2699.99; new; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "gpu_system",
+        "condition": "new",
+        "vendor": "Apple",
+        "model": "Mac mini M4 32GB / 512GB",
+        "memory_gb": "32",
+        "bandwidth_gbs": "120",
+        "price_usd": "1429.99",
+        "price_date": "2026-10-22",
+        "price_basis": "New selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/278228733588 https://support.apple.com/en-us/121555",
+        "notes": "Complete system with 32GB installed unified memory and stated SSD; shared CPU/GPU memory counted once. Apple advertised 120 GB/s unified memory bandwidth.  Seller: ItsWorthMore. Live browser checked 2026-10-23T05:05:38.777Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 1429.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "ItsWorthMore",
+        "sku_or_variant": "Mac mini M4 32GB / 512GB",
+        "retrieved_at": "2026-10-23T05:05:38.777Z",
+        "price_url": "https://www.ebay.com/itm/278228733588",
+        "stock_url": "https://www.ebay.com/itm/278228733588",
+        "spec_urls": [
+          "https://support.apple.com/en-us/121555"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 1429.99,
+        "price_and_stock_observation": "USD 1429.99; new; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "gpu_system",
+        "condition": "used",
+        "vendor": "Apple",
+        "model": "Mac mini M2 8GB / 256GB",
+        "memory_gb": "8",
+        "bandwidth_gbs": "100",
+        "price_usd": "469.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/128148767782 https://support.apple.com/en-us/111837",
+        "notes": "Complete system with 8GB installed unified memory and stated SSD; shared CPU/GPU memory counted once. Apple advertised 100 GB/s unified memory bandwidth.  Seller: ECC Sells. Live browser checked 2026-10-23T05:04:56.480Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 469.99 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "ECC Sells",
+        "sku_or_variant": "Mac mini M2 8GB / 256GB",
+        "retrieved_at": "2026-10-23T05:04:56.480Z",
+        "price_url": "https://www.ebay.com/itm/128148767782",
+        "stock_url": "https://www.ebay.com/itm/128148767782",
+        "spec_urls": [
+          "https://support.apple.com/en-us/111837"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 469.99,
+        "price_and_stock_observation": "USD 469.99; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "gpu_system",
+        "condition": "used",
+        "vendor": "Apple",
+        "model": "Mac mini M4 16GB / 256GB",
+        "memory_gb": "16",
+        "bandwidth_gbs": "120",
+        "price_usd": "625",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/117481413832 https://support.apple.com/en-us/121555",
+        "notes": "Complete system with 16GB installed unified memory and stated SSD; shared CPU/GPU memory counted once. Apple advertised 120 GB/s unified memory bandwidth. Seller claims AppleCare+ included; coverage/transfer not independently verified. Seller: rarerst. Live browser checked 2026-10-23T05:04:57.872Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 0.00; pre-tax delivered total USD 625.00 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "rarerst",
+        "sku_or_variant": "Mac mini M4 16GB / 256GB",
+        "retrieved_at": "2026-10-23T05:04:57.872Z",
+        "price_url": "https://www.ebay.com/itm/117481413832",
+        "stock_url": "https://www.ebay.com/itm/117481413832",
+        "spec_urls": [
+          "https://support.apple.com/en-us/121555"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 625,
+        "price_and_stock_observation": "USD 625.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "gpu_system",
+        "condition": "used",
+        "vendor": "Apple",
+        "model": "Mac Studio M2 Ultra 64GB / 1TB (24-core CPU, 60-core GPU)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "800",
+        "price_usd": "3000",
+        "price_date": "2026-10-22",
+        "price_basis": "Used selected one-unit asking offer; live item verified",
+        "availability": "Active Buy It Now; US delivery",
+        "source": "https://www.ebay.com/itm/327415203922 https://support.apple.com/en-us/111835",
+        "notes": "Complete system with 64GB installed unified memory and stated SSD; shared CPU/GPU memory counted once. Apple advertised 800 GB/s unified memory bandwidth.  Seller: savings_place. Live browser checked 2026-10-23T05:04:59.294Z; active purchase control and no stock warning. One selected asking offer, not a market median. Shipping shown USD 11.30; pre-tax delivered total USD 3011.30 for displayed US destination."
+      },
+      "evidence": {
+        "seller": "savings_place",
+        "sku_or_variant": "Mac Studio M2 Ultra 64GB / 1TB (24-core CPU, 60-core GPU)",
+        "retrieved_at": "2026-10-23T05:04:59.294Z",
+        "price_url": "https://www.ebay.com/itm/327415203922",
+        "stock_url": "https://www.ebay.com/itm/327415203922",
+        "spec_urls": [
+          "https://support.apple.com/en-us/111835"
+        ],
+        "shipping_usd": 11.3,
+        "delivered_total_usd": 3011.3,
+        "price_and_stock_observation": "USD 3000.00; used; Active Buy It Now; US delivery; active purchase control; exact configuration in title/specifications.",
+        "delivery": "US delivery quote shown",
+        "freshness": "live browser confirmation"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge T430 2x E5-2620 v4 64GB (4x16GB)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "68.256",
+        "price_usd": "876",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-t430/p/2NS-0008-7D1X4?Item=9SIA8Z0M400021 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge T430 2x E5-2620 v4 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0M400021. Bandwidth calculation: 4 populated 64-bit channels x 2133 MT/s x 8 bytes / 1000 = 68.256 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 876.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0M400021",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-t430/p/2NS-0008-7D1X4?Item=9SIA8Z0M400021",
+        "stock_url": "https://www.newegg.com/dell-poweredge-t430/p/2NS-0008-7D1X4?Item=9SIA8Z0M400021",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 876,
+        "price_and_stock_observation": "Priced configuration: PowerEdge T430 2x E5-2620 v4 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0M400021. Bandwidth calculation: 4 populated 64-bit channels x 2133 MT/s x 8 bytes / 1000 = 68.256 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 876.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R730xd 2x E5-2640 v3 64GB (4x16GB)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "59.712",
+        "price_usd": "832",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r730xd-rack/p/2NS-0008-701V0?Item=9SIA8Z0HXJ4583 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers https://www.intel.co.uk/content/dam/www/public/emea/xe/en/documents/product-matrix-2017-q1-non-nda.pdf",
+        "notes": "Priced configuration: PowerEdge R730xd 2x E5-2640 v3 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0HXJ4583. Bandwidth calculation: 4 populated 64-bit channels x 1866 MT/s x 8 bytes / 1000 = 59.712 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 832.00. Standard delivery: Nov 02-04. DDR4-2133 rated DIMMs downclock to CPU E5-2640 v3 maximum1866MT/s. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0HXJ4583",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r730xd-rack/p/2NS-0008-701V0?Item=9SIA8Z0HXJ4583",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r730xd-rack/p/2NS-0008-701V0?Item=9SIA8Z0HXJ4583",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+          "https://www.intel.co.uk/content/dam/www/public/emea/xe/en/documents/product-matrix-2017-q1-non-nda.pdf"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 832,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R730xd 2x E5-2640 v3 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0HXJ4583. Bandwidth calculation: 4 populated 64-bit channels x 1866 MT/s x 8 bytes / 1000 = 59.712 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 832.00. Standard delivery: Nov 02-04. DDR4-2133 rated DIMMs downclock to CPU E5-2640 v3 maximum1866MT/s.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R440 2x Gold 6130 16GB (2x8GB)",
+        "memory_gb": "16",
+        "bandwidth_gbs": "42.656",
+        "price_usd": "977",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r440-rack/p/2NS-0008-7N4F2?Item=9SIA8Z0KY65554 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge R440 2x Gold 6130 16GB (2x8GB); 4x4TB SAS HDD; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0KY65554. Bandwidth calculation: 2 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 42.656 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 977.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0KY65554",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r440-rack/p/2NS-0008-7N4F2?Item=9SIA8Z0KY65554",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r440-rack/p/2NS-0008-7N4F2?Item=9SIA8Z0KY65554",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 977,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R440 2x Gold 6130 16GB (2x8GB); 4x4TB SAS HDD; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0KY65554. Bandwidth calculation: 2 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 42.656 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 977.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Supermicro",
+        "model": "SYS-6048R-E1CR36N 2x E5-2680 v4 64GB (4x16GB)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "76.8",
+        "price_usd": "959",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/supermicro-cse-847be1c-r1k28lpb-x10dri-t4-sys-6048r-e1cr36n/p/2NS-000A-0K4R9?Item=9SIA8Z0KN14148 https://www.supermicro.com/manuals/motherboard/C600/MNL-1560.pdf",
+        "notes": "Priced configuration: SYS-6048R-E1CR36N 2x E5-2680 v4 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0KN14148. Bandwidth calculation: 4 populated 64-bit channels x 2400 MT/s x 8 bytes / 1000 = 76.8 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 959.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0KN14148",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/supermicro-cse-847be1c-r1k28lpb-x10dri-t4-sys-6048r-e1cr36n/p/2NS-000A-0K4R9?Item=9SIA8Z0KN14148",
+        "stock_url": "https://www.newegg.com/supermicro-cse-847be1c-r1k28lpb-x10dri-t4-sys-6048r-e1cr36n/p/2NS-000A-0K4R9?Item=9SIA8Z0KN14148",
+        "spec_urls": [
+          "https://www.supermicro.com/manuals/motherboard/C600/MNL-1560.pdf"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 959,
+        "price_and_stock_observation": "Priced configuration: SYS-6048R-E1CR36N 2x E5-2680 v4 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0KN14148. Bandwidth calculation: 4 populated 64-bit channels x 2400 MT/s x 8 bytes / 1000 = 76.8 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 959.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R640 2x Gold 6148 64GB (4x16GB)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "85.312",
+        "price_usd": "1130",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r640-rack/p/2NS-0008-76WG5?Item=9SIA8Z0JUC5546 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge R640 2x Gold 6148 64GB (4x16GB); 2x400GB SATA SSD; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0JUC5546. Bandwidth calculation: 4 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 85.312 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 1130.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0JUC5546",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r640-rack/p/2NS-0008-76WG5?Item=9SIA8Z0JUC5546",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r640-rack/p/2NS-0008-76WG5?Item=9SIA8Z0JUC5546",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 1130,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R640 2x Gold 6148 64GB (4x16GB); 2x400GB SATA SSD; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0JUC5546. Bandwidth calculation: 4 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 85.312 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 1130.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R740xd LFF 2x Gold 6148 256GB (8x32GB)",
+        "memory_gb": "256",
+        "bandwidth_gbs": "170.624",
+        "price_usd": "2319",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r740xd-rack/p/2NS-0008-79AJ0?Item=9SIA68FM5Z5687 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge R740xd LFF 2x Gold 6148 256GB (8x32GB); No drives; CPUs and installed RAM included. Seller: TekBoost; Newegg item 9SIA68FM5Z5687. Bandwidth calculation: 8 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 170.624 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2319.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "TekBoost; Newegg item 9SIA68FM5Z5687",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r740xd-rack/p/2NS-0008-79AJ0?Item=9SIA68FM5Z5687",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r740xd-rack/p/2NS-0008-79AJ0?Item=9SIA68FM5Z5687",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 2319,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R740xd LFF 2x Gold 6148 256GB (8x32GB); No drives; CPUs and installed RAM included. Seller: TekBoost; Newegg item 9SIA68FM5Z5687. Bandwidth calculation: 8 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 170.624 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2319.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Supermicro",
+        "model": "SYS-6019U-TN4R4T 2x Gold 5118 256GB (8x32GB)",
+        "memory_gb": "256",
+        "bandwidth_gbs": "153.6",
+        "price_usd": "1805",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/supermicro-cse-819uts-r751p-t-x11dpu-sys-6019u-tn4r4t/p/2NS-000A-0K4P2?Item=9SIA8Z0KN14042 https://www.supermicro.com/support/resources/memory/X11_memory_config_guide.pdf",
+        "notes": "Priced configuration: SYS-6019U-TN4R4T 2x Gold 5118 256GB (8x32GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0KN14042. Bandwidth calculation: 8 populated 64-bit channels x 2400 MT/s x 8 bytes / 1000 = 153.6 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 1805.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0KN14042",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/supermicro-cse-819uts-r751p-t-x11dpu-sys-6019u-tn4r4t/p/2NS-000A-0K4P2?Item=9SIA8Z0KN14042",
+        "stock_url": "https://www.newegg.com/supermicro-cse-819uts-r751p-t-x11dpu-sys-6019u-tn4r4t/p/2NS-000A-0K4P2?Item=9SIA8Z0KN14042",
+        "spec_urls": [
+          "https://www.supermicro.com/support/resources/memory/X11_memory_config_guide.pdf"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 1805,
+        "price_and_stock_observation": "Priced configuration: SYS-6019U-TN4R4T 2x Gold 5118 256GB (8x32GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0KN14042. Bandwidth calculation: 8 populated 64-bit channels x 2400 MT/s x 8 bytes / 1000 = 153.6 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 1805.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R740xd SFF 2x Gold 6130 256GB (8x32GB)",
+        "memory_gb": "256",
+        "bandwidth_gbs": "170.624",
+        "price_usd": "2441",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r740xd-rack/p/2NS-0008-708R0?Item=9SIA68FM5Z5506 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge R740xd SFF 2x Gold 6130 256GB (8x32GB); 2x800GB SATA SSD; CPUs and installed RAM included. Seller: TekBoost; Newegg item 9SIA68FM5Z5506. Bandwidth calculation: 8 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 170.624 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2441.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "TekBoost; Newegg item 9SIA68FM5Z5506",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r740xd-rack/p/2NS-0008-708R0?Item=9SIA68FM5Z5506",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r740xd-rack/p/2NS-0008-708R0?Item=9SIA68FM5Z5506",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 2441,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R740xd SFF 2x Gold 6130 256GB (8x32GB); 2x800GB SATA SSD; CPUs and installed RAM included. Seller: TekBoost; Newegg item 9SIA68FM5Z5506. Bandwidth calculation: 8 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 170.624 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2441.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R740 / 2x Xeon Platinum 8160 / 128GB",
+        "memory_gb": "128",
+        "bandwidth_gbs": "170.624",
+        "price_usd": "1544",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r740-rack/p/2NS-0008-70792?Item=9SIA8Z0HXU4221 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge R740 2x Platinum 8160 128GB (8x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0HXU4221. Bandwidth calculation: 8 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 170.624 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 1544.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0HXU4221",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r740-rack/p/2NS-0008-70792?Item=9SIA8Z0HXU4221",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r740-rack/p/2NS-0008-70792?Item=9SIA8Z0HXU4221",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 1544,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R740 2x Platinum 8160 128GB (8x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0HXU4221. Bandwidth calculation: 8 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 170.624 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 1544.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "used",
+        "vendor": "Dell",
+        "model": "PowerEdge R640 2x Gold 6134 64GB (4x16GB)",
+        "memory_gb": "64",
+        "bandwidth_gbs": "85.312",
+        "price_usd": "986",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/dell-poweredge-r640-rack/p/2NS-0008-76U01?Item=9SIA8Z0JUC4287 https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers",
+        "notes": "Priced configuration: PowerEdge R640 2x Gold 6134 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0JUC4287. Bandwidth calculation: 4 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 85.312 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 986.00. Standard delivery: Nov 02-04. Exact listing condition: Refurbished (grouped under used)."
+      },
+      "evidence": {
+        "seller": "MKTLLC; Newegg item 9SIA8Z0JUC4287",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/dell-poweredge-r640-rack/p/2NS-0008-76U01?Item=9SIA8Z0JUC4287",
+        "stock_url": "https://www.newegg.com/dell-poweredge-r640-rack/p/2NS-0008-76U01?Item=9SIA8Z0JUC4287",
+        "spec_urls": [
+          "https://www.dell.com/support/kbdoc/en-us/000135681/supported-memory-configuration-guide-for-poweredge-servers"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 986,
+        "price_and_stock_observation": "Priced configuration: PowerEdge R640 2x Gold 6134 64GB (4x16GB); No drives; CPUs and installed RAM included. Seller: MKTLLC; Newegg item 9SIA8Z0JUC4287. Bandwidth calculation: 4 populated 64-bit channels x 2666 MT/s x 8 bytes / 1000 = 85.312 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 986.00. Standard delivery: Nov 02-04.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant DL145 Gen11 EPYC 8024P 32GB (2x16GB) P92107-005",
+        "memory_gb": "32",
+        "bandwidth_gbs": "76.8",
+        "price_usd": "5467",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319346?Item=N82E16859319346 https://www.hpe.com/psnow/doc/a50009217enw",
+        "notes": "Priced configuration: ProLiant DL145 Gen11 EPYC 8024P 32GB (2x16GB) P92107-005; No drives; CPUs and installed RAM included. Seller: Newegg; Newegg item N82E16859319346. Bandwidth calculation: 2 populated 64-bit channels x 4800 MT/s x 8 bytes / 1000 = 76.8 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 5467.00. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "Newegg; Newegg item N82E16859319346",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319346?Item=N82E16859319346",
+        "stock_url": "https://www.newegg.com/p/N82E16859319346?Item=N82E16859319346",
+        "spec_urls": [
+          "https://www.hpe.com/psnow/doc/a50009217enw"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 5467,
+        "price_and_stock_observation": "Priced configuration: ProLiant DL145 Gen11 EPYC 8024P 32GB (2x16GB) P92107-005; No drives; CPUs and installed RAM included. Seller: Newegg; Newegg item N82E16859319346. Bandwidth calculation: 2 populated 64-bit channels x 4800 MT/s x 8 bytes / 1000 = 76.8 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 5467.00. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant DL325 Gen11 EPYC 9015 64GB (2x32GB) P94956-005",
+        "memory_gb": "64",
+        "bandwidth_gbs": "102.4",
+        "price_usd": "7798",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319356?Item=N82E16859319356 https://www.hpe.com/emea_europe/en/collaterals/collateral.a50004297enw.html",
+        "notes": "Priced configuration: ProLiant DL325 Gen11 EPYC 9015 64GB (2x32GB) P94956-005; No drives; CPUs and installed RAM included. Seller: Newegg; Newegg item N82E16859319356. Bandwidth calculation: 2 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 102.4 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 7798.00. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "Newegg; Newegg item N82E16859319356",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319356?Item=N82E16859319356",
+        "stock_url": "https://www.newegg.com/p/N82E16859319356?Item=N82E16859319356",
+        "spec_urls": [
+          "https://www.hpe.com/emea_europe/en/collaterals/collateral.a50004297enw.html"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 7798,
+        "price_and_stock_observation": "Priced configuration: ProLiant DL325 Gen11 EPYC 9015 64GB (2x32GB) P94956-005; No drives; CPUs and installed RAM included. Seller: Newegg; Newegg item N82E16859319356. Bandwidth calculation: 2 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 102.4 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 7798.00. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant DL360 Gen12 Xeon 6505P 128GB (4x32GB) P92540-005",
+        "memory_gb": "128",
+        "bandwidth_gbs": "204.8",
+        "price_usd": "13025.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319342?Item=N82E16859319342 https://www.hpe.com/psnow/doc/a50009219enw",
+        "notes": "Priced configuration: ProLiant DL360 Gen12 Xeon 6505P 128GB (4x32GB) P92540-005; No drives; CPUs and installed RAM included. Seller: Newegg; Newegg item N82E16859319342. Bandwidth calculation: 4 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 204.8 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 13025.99. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "Newegg; Newegg item N82E16859319342",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319342?Item=N82E16859319342",
+        "stock_url": "https://www.newegg.com/p/N82E16859319342?Item=N82E16859319342",
+        "spec_urls": [
+          "https://www.hpe.com/psnow/doc/a50009219enw"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 13025.99,
+        "price_and_stock_observation": "Priced configuration: ProLiant DL360 Gen12 Xeon 6505P 128GB (4x32GB) P92540-005; No drives; CPUs and installed RAM included. Seller: Newegg; Newegg item N82E16859319342. Bandwidth calculation: 4 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 204.8 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 13025.99. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant DL380 Gen12 Xeon 6505P 64GB (2x32GB) P89243-005",
+        "memory_gb": "64",
+        "bandwidth_gbs": "102.4",
+        "price_usd": "10399",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319325?Item=9SIC0E9M6F1427 https://www.intel.com/content/www/us/en/products/sku/242667/intel-xeon-6505p-processor-48m-cache-2-20-ghz/specifications.html",
+        "notes": "Priced configuration: ProLiant DL380 Gen12 Xeon 6505P 64GB (2x32GB) P89243-005; 2x480GB SATA SSD; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9M6F1427. Bandwidth calculation: 2 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 102.4 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 10399.00. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "AMURAS NY, INC",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319325?Item=9SIC0E9M6F1427",
+        "stock_url": "https://www.newegg.com/p/N82E16859319325?Item=9SIC0E9M6F1427",
+        "spec_urls": [
+          "https://www.intel.com/content/www/us/en/products/sku/242667/intel-xeon-6505p-processor-48m-cache-2-20-ghz/specifications.html"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 10399,
+        "price_and_stock_observation": "Priced configuration: ProLiant DL380 Gen12 Xeon 6505P 64GB (2x32GB) P89243-005; 2x480GB SATA SSD; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9M6F1427. Bandwidth calculation: 2 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 102.4 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 10399.00. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant DL320 Gen12 Xeon 6505P 64GB (1x64GB) P87790-005",
+        "memory_gb": "64",
+        "bandwidth_gbs": "51.2",
+        "price_usd": "8199",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319321?Item=9SIC0E9M103673 https://www.intel.com/content/www/us/en/products/sku/242667/intel-xeon-6505p-processor-48m-cache-2-20-ghz/specifications.html",
+        "notes": "Priced configuration: ProLiant DL320 Gen12 Xeon 6505P 64GB (1x64GB) P87790-005; 2x480GB SATA SSD; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9M103673. Bandwidth calculation: 1 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 51.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 8199.00. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "AMURAS NY, INC",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319321?Item=9SIC0E9M103673",
+        "stock_url": "https://www.newegg.com/p/N82E16859319321?Item=9SIC0E9M103673",
+        "spec_urls": [
+          "https://www.intel.com/content/www/us/en/products/sku/242667/intel-xeon-6505p-processor-48m-cache-2-20-ghz/specifications.html"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 8199,
+        "price_and_stock_observation": "Priced configuration: ProLiant DL320 Gen12 Xeon 6505P 64GB (1x64GB) P87790-005; 2x480GB SATA SSD; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9M103673. Bandwidth calculation: 1 populated 64-bit channels x 6400 MT/s x 8 bytes / 1000 = 51.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 8199.00. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant MicroServer Gen11 P86811-005 / Xeon 6315P / 16GB",
+        "memory_gb": "16",
+        "bandwidth_gbs": "35.2",
+        "price_usd": "2759",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319308?Item=9SIC0E9KNN0521 https://www.hpe.com/psnow/doc/a50007028enw",
+        "notes": "Priced configuration: ProLiant MicroServer Gen11 Xeon 6315P 16GB (1x16GB) P86811-005; No drives; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9KNN0521. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2759.00. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "AMURAS NY, INC",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319308?Item=9SIC0E9KNN0521",
+        "stock_url": "https://www.newegg.com/p/N82E16859319308?Item=9SIC0E9KNN0521",
+        "spec_urls": [
+          "https://www.hpe.com/psnow/doc/a50007028enw"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 2759,
+        "price_and_stock_observation": "Priced configuration: ProLiant MicroServer Gen11 Xeon 6315P 16GB (1x16GB) P86811-005; No drives; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9KNN0521. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2759.00. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant MicroServer Gen11 Xeon 6325P 32GB (1x32GB) P86771-005",
+        "memory_gb": "32",
+        "bandwidth_gbs": "35.2",
+        "price_usd": "3689",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319306?Item=9SIC0E9KNN0660 https://www.hpe.com/psnow/doc/a50007028enw",
+        "notes": "Priced configuration: ProLiant MicroServer Gen11 Xeon 6325P 32GB (1x32GB) P86771-005; 1x4TB SATA HDD; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9KNN0660. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 3689.00. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "AMURAS NY, INC",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319306?Item=9SIC0E9KNN0660",
+        "stock_url": "https://www.newegg.com/p/N82E16859319306?Item=9SIC0E9KNN0660",
+        "spec_urls": [
+          "https://www.hpe.com/psnow/doc/a50007028enw"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 3689,
+        "price_and_stock_observation": "Priced configuration: ProLiant MicroServer Gen11 Xeon 6325P 32GB (1x32GB) P86771-005; 1x4TB SATA HDD; CPUs and installed RAM included. Seller: AMURAS NY, INC.; Newegg item 9SIC0E9KNN0660. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 3689.00. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant MicroServer Gen11 Pentium G7400 16GB (1x16GB) P74439-005",
+        "memory_gb": "16",
+        "bandwidth_gbs": "35.2",
+        "price_usd": "2077.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319223?Item=9SIBW6VM7M5181 https://www.hpe.com/psnow/doc/a50007028enw",
+        "notes": "Priced configuration: ProLiant MicroServer Gen11 Pentium G7400 16GB (1x16GB) P74439-005; 1x1TB SATA HDD; CPUs and installed RAM included. Seller: Best IT Hub; Newegg item 9SIBW6VM7M5181. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2077.99. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "Best IT Hub; Newegg item 9SIBW6VM7M5181",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319223?Item=9SIBW6VM7M5181",
+        "stock_url": "https://www.newegg.com/p/N82E16859319223?Item=9SIBW6VM7M5181",
+        "spec_urls": [
+          "https://www.hpe.com/psnow/doc/a50007028enw"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 2077.99,
+        "price_and_stock_observation": "Priced configuration: ProLiant MicroServer Gen11 Pentium G7400 16GB (1x16GB) P74439-005; 1x1TB SATA HDD; CPUs and installed RAM included. Seller: Best IT Hub; Newegg item 9SIBW6VM7M5181. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 2077.99. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant DL20 Gen11 P83282-005 / Xeon 6325P / 32GB",
+        "memory_gb": "32",
+        "bandwidth_gbs": "35.2",
+        "price_usd": "5878.99",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/p/N82E16859319264?Item=9SIBW6VM7N5847 https://www.hpe.com/us/en/collaterals/collateral.a50007009enw.html",
+        "notes": "Priced configuration: ProLiant DL20 Gen11 Xeon 6325P 32GB (1x32GB) P83282-005; 2x960GB SATA SSD; CPUs and installed RAM included. Seller: Best IT Hub; Newegg item 9SIBW6VM7N5847. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 5878.99. Standard delivery: Oct 26-Nov 04, depending on selected listing."
+      },
+      "evidence": {
+        "seller": "Best IT Hub; Newegg item 9SIBW6VM7N5847",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/p/N82E16859319264?Item=9SIBW6VM7N5847",
+        "stock_url": "https://www.newegg.com/p/N82E16859319264?Item=9SIBW6VM7N5847",
+        "spec_urls": [
+          "https://www.hpe.com/us/en/collaterals/collateral.a50007009enw.html"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 5878.99,
+        "price_and_stock_observation": "Priced configuration: ProLiant DL20 Gen11 Xeon 6325P 32GB (1x32GB) P83282-005; 2x960GB SATA SSD; CPUs and installed RAM included. Seller: Best IT Hub; Newegg item 9SIBW6VM7N5847. Bandwidth calculation: 1 populated 64-bit channels x 4400 MT/s x 8 bytes / 1000 = 35.2 GB/s theoretical aggregate NUMA bandwidth; assumes manufacturer recommended DIMM population across sockets/channels. Exact installed DIMM count and rated speed verified in seller bullets/specifications. 4800-rated DIMMs operate at 4400 MT/s under current HPE platform QuickSpecs. Live browser verified 2026-10-22: selected price, active Add to cart and no stock warning. One asking offer, not a market median. Shipping shown: USD 0.00 to Santa Clara, CA 95052; pre-tax delivered total USD 5878.99. Standard delivery: Oct 26-Nov 04, depending on selected listing.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    },
+    {
+      "option": {
+        "category": "cpu_system",
+        "condition": "new",
+        "vendor": "HPE",
+        "model": "ProLiant ML350 Gen12 Xeon 6515P 64GB (2x32GB) P94890-005",
+        "memory_gb": "64",
+        "bandwidth_gbs": "102.4",
+        "price_usd": "9077",
+        "price_date": "2026-10-22",
+        "price_basis": "Newegg selected one-unit asking offer; live page verified",
+        "availability": "Available; ships to US destination",
+        "source": "https://www.newegg.com/hpe-proliant-ml350-g12-p94890-005-tower/p/N82E16859319353?Item=N82E16859319353 https://buy.hpe.com/us/en/compute/tower-servers/proliant-ml300-servers/hpe-proliant-compute-ml350-gen12/p/1014865657 https://www.intel.com/content/www/us/en/products/sku/242669/intel-xeon-6515p-processor-72m-cache-2-30-ghz/specifications.html",
+        "notes": "Priced configuration: HPE P94890-005 ProLiant ML350 Gen12, Xeon 6515P, installed 64GB (2x32GB DDR5-6400); no drives. Seller: Newegg. Two populated 64-bit channels x6400MT/s x8bytes /1000=102.4GB/s theoretical; assumes manufacturer recommended DIMM population. Live browser checked 2026-10-22 America/Los_Angeles: USD9077, active Add to cart, no stock warning, free US shipping to Santa Clara95052, standard delivery Oct26-30. One selected asking offer, not a market median. Shipping USD0; pre-tax delivered total USD9077."
+      },
+      "evidence": {
+        "seller": "Newegg",
+        "retrieved_date": "2026-10-22 America/Los_Angeles",
+        "price_url": "https://www.newegg.com/hpe-proliant-ml350-g12-p94890-005-tower/p/N82E16859319353?Item=N82E16859319353",
+        "stock_url": "https://www.newegg.com/hpe-proliant-ml350-g12-p94890-005-tower/p/N82E16859319353?Item=N82E16859319353",
+        "spec_urls": [
+          "https://buy.hpe.com/us/en/compute/tower-servers/proliant-ml300-servers/hpe-proliant-compute-ml350-gen12/p/1014865657",
+          "https://www.intel.com/content/www/us/en/products/sku/242669/intel-xeon-6515p-processor-72m-cache-2-30-ghz/specifications.html"
+        ],
+        "shipping_usd": 0,
+        "delivered_total_usd": 9077,
+        "price_and_stock_observation": "Priced configuration: HPE P94890-005 ML350 Gen12 Xeon6515P,64GB(2x32GB) DDR5-6400; no drives; CPUs andRAM included. SellerNewegg. Two populated64-bit channels x6400MT/s x8 /1000=102.4GB/s theoretical; assumes manufacturer recommended DIMM population. Livebrowser2026-10-22:9077USD Addtocart, no stockwarning, freeUSshipping toSantaClara95052, standarddeliveryOct26-30. One askingoffer notmarketmedian. shipping0USD delivered9077USD pre-tax.",
+        "delivery": "Free Standard delivery to Santa Clara95052; date range in notes",
+        "freshness": "live browser confirmation by verifying subagent"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://www.ebay.com/itm/227579266423",
+      "reason": "Broken4-pin cooling fan connector disclosed; replaced with fully working board."
+    },
+    {
+      "url": "https://www.ebay.com/itm/188841317342",
+      "reason": "Item specifics claim24modules while title generic; quantity ambiguous. Replaced with explicit1-stick listing."
+    },
+    {
+      "url": "https://www.newegg.com/amd-ryzen-7-5000-series-ryzen-7-5700x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113735",
+      "reason": "Back order; not currently available."
+    }
+  ],
+  "limitations": [
+    "Selected one-unit asking offers, not whole-market estimates.",
+    "Stock and shipping depend on destination and can change.",
+    "Server bandwidth is a theoretical calculation under manufacturer recommended channel population, not measured throughput; installed DIMM count and operating speed are separately verified."
+  ],
+  "verification": {
+    "reviewer": "Independent subagent verify_top_ten",
+    "completed_at": "2026-10-23T05:12:32+00:00",
+    "result": "passed",
+    "checks": [
+      "22 metric tables contain ten entries each; flat category order and single README timestamp preserved",
+      "All 52 observations match active source CSV; 49 additions and three updated identities",
+      "Selected server offers, installed DIMM counts, CPU/OEM speed limits, condition and US delivery independently checked",
+      "Additional Adafruit/eBay embedded offers independently spot-checked",
+      "Shipping arithmetic and local Markdown links valid",
+      "make check and make test pass (12 tests)"
+    ]
+  }
+}

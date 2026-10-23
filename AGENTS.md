@@ -19,6 +19,9 @@ Distinguish advertised specifications, theoretical calculations and measured per
 - `data/price_refresh.json` records the latest non-GPU refresh outcomes and evidence, including excluded rows.
   Account for every requested source row: verify an exact current offer or explicitly mark it unavailable for ranking.
   Preserve its historical price/date when no replacement is verified; never infer worldwide stock from a failed search.
+- `data/top_ten_expansion.json` records the subsequent coverage expansion, exact accepted offers and rejection
+  reasons. Preserve the earlier refresh audit as history. Merge an existing configuration when replacing its offer;
+  a different spelling or seller does not make another hardware option.
 - Keep price dates and price bases in source data. The README has one generation timestamp for all rankings,
   with no per-row price-date or price-basis columns.
 - Preserve the flat New/Used sections and top-ten rankings, including CPU systems after DDR and used embedded systems.

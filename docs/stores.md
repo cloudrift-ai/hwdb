@@ -29,6 +29,14 @@ of a verified current matching offer and two additional used embedded candidates
 accepting a white Corsair DDR5 kit for the black kit's MPN. Complete-server checks distinguish installed RAM from
 configuration choices; search Error Pages are recorded as access failures, not evidence that stock is zero.
 
+The subsequent [top-ten expansion](../data/top_ten_expansion.json) verifies 52 selected offers: 49 additional
+configurations and three replacements of existing records. It fills all 22 metric tables using eBay plus Newegg
+for new/refurbished servers and processors/memory, and Adafruit for embedded boards. Newegg item pages expose the
+selected New/Used offer, marketplace seller and US delivery. Preserve `?Item=` when it selects that seller.
+An alternate used price can precede the selected new price; Back Order is ineligible. Server bandwidth checks
+combine installed DIMM counts with CPU/OEM operating rates and documented population rules, with assumptions
+retained in notes. See the updated store prompts for the 4400 MT/s HPE and 1866 MT/s Xeon downclock examples.
+
 These are extraction examples, not rows to import without a fresh eligibility check. Amounts describe the returned
 snapshots and exclude any separately shown shipping or tax.
 

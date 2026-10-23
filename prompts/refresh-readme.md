@@ -31,3 +31,8 @@ as separate candidates with the same metric evidence and explicit priced configu
 
 Report what changed, verification results and remaining coverage gaps. Do not claim a generated timestamp means
 every price was reverified. Finding fewer than ten eligible options is a valid outcome.
+
+For a coverage expansion, preserve the previous refresh audit and record accepted options, updated identities,
+sources, stock/condition evidence and rejection reasons in `data/top_ten_expansion.json`. Check existing hardware
+by SKU/configuration as well as its displayed model name; merge replacement offers rather than adding aliases.
+Verify coverage separately for every metric table, since a capacity-only server does not fill a bandwidth gap.

@@ -24,6 +24,12 @@ can help remove accessories, but eBay can append loosely related results after e
 Record available quantity rather than historical sold counts in the availability field. Put sales history in notes
 if needed: the README's conservative unavailable filter excludes entries containing the standalone word "sold".
 
+Read seller condition notes even when the structured condition is Used. A tested Pi 5 16GB offer disclosed a
+broken fan connector and was rejected in favor of a working board. For DDR, compare module count, per-module
+capacity and total capacity: a generic 16GB title conflicted with an item-specific count of 24 modules. Reject
+unresolved contradictions and choose a listing that explicitly states the quantity being priced. Box-only Mac
+listings can match every chip/RAM search term; establish that the computer itself is included.
+
 Check delivery eligibility separately from currency. The tested Used search included a USD-priced card available
 only for pickup in Belgium. Keep pickup-only offers outside the default US-deliverable comparison. Record item price,
 shipping, delivered total when known, seller feedback and defects in evidence/notes. Do not replace HWDB's item price
