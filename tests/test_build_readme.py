@@ -185,7 +185,7 @@ class RankingTests(unittest.TestCase):
             text = build_readme.render_rankings([option()])
         headings = [line for line in text.splitlines() if line.startswith("### ")]
         self.assertEqual(headings, ["### VRAM per $", "### Cost per $"] * 2)
-        self.assertIn("| Rank | Option | USD | Price (USD) | USD/$ |", text)
+        self.assertIn("| Rank | Option | USD | Price | USD/$ |", text)
 
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:

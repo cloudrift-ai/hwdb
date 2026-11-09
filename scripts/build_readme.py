@@ -249,7 +249,7 @@ def render_table(options, category, condition, metric, label):
     lines = [f"### {label} per $", ""]
     if count < 10:
         lines += [f"Coverage: {count} qualifying option{'s' if count != 1 else ''} after availability filtering; fewer than ten recorded.", ""]
-    lines += [f"| Rank | Option | {unit} | Price (USD) | {unit}/$ | Sources |",
+    lines += [f"| Rank | Option | {unit} | Price | {unit}/$ | Sources |",
               "| ---: | --- | ---: | ---: | ---: | --- |"]
     for rank, option in enumerate(top, 1):
         value = getattr(option, metric)
