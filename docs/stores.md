@@ -59,9 +59,14 @@ snapshots and exclude any separately shown shipping or tax.
 
 ## Sources that need another route
 
-- [ARACE Milk-V Jupiter NX](https://arace.tech/products/milk-v-jupiter-nx?variant=43904659718324) could not be opened
-  by the page-extraction tool in this check. Keep it a lead until a browser or another public route verifies the
-  exact RAM variant, price, currency and availability.
+- ARACE (tested 2026-11-08): the [Milk-V Jupiter NX page](https://arace.tech/products/milk-v-jupiter-nx?variant=43904659718324)
+  reads in a browser; from the page, `fetch('/products/<handle>.js')` returns per-variant SKU, USD price and
+  availability. Ships from Hong Kong; US shipping appears only at checkout.
+- Mixtile (tested 2026-11-08): the WooCommerce `data-product_variations` attribute on `form.variations_form` gives
+  per-variant SKU and `is_in_stock`.
+- B&H (Cloudflare challenge) and CDW (Akamai Access Denied) blocked the built-in browser on 2026-11-08. Newegg and
+  NeweggBusiness often show high-end server CPUs and GB300 workstations with "Request a quote" only; treat those as
+  quote-only, not offers.
 - [Pimoroni Raspberry Pi 5](https://shop.pimoroni.com/products/raspberry-pi-5) was readable, but the tested extraction
   did not establish a selected variant's USD price and stock. Its location controls affect currency and taxes.
   Verify a US-region variant before adding a USD offer; do not treat the store as a confirmed USD extraction source.

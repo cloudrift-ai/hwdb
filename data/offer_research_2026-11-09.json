@@ -84,5 +84,93 @@
       "Bandwidth assumes manufacturer-recommended DIMM placement; slots not observed",
       "R620 DIMM rated speeds unstated; CPU limit or Dell 2DPC table used"
     ]
+  },
+  "unranked_rows": {
+    "accepted": [
+      {
+        "row": "new Colorful BATTLE-AX 32GB (2x16GB DDR4-3200 CL18)",
+        "price_usd": 192.99,
+        "url": "https://www.newegg.com/p/0RN-0158-00012?Item=9SIC70BKYB1295",
+        "observation": "Selected 16GBx2 set at USD 192.99, Add to cart active, no stock warning, shipped by Newegg, free shipping",
+        "date": "2026-11-08"
+      },
+      {
+        "row": "new Milk-V Jupiter NX 16GB",
+        "price_usd": 109.9,
+        "url": "https://arace.tech/products/milk-v-jupiter-nx?variant=43904659718324",
+        "observation": "16GB/32GB variant USD 109.90, In stock, Add to cart; Shopify variant available=true in USD; ships worldwide, US shipping at checkout",
+        "date": "2026-11-08"
+      },
+      {
+        "row": "new NVIDIA DGX Station GB300",
+        "price_usd": 132159,
+        "url": "https://bizon-tech.com/gb300.html",
+        "observation": "BIZON OEM GB300 build, 'Starting at' base configuration with Add to cart; Batch 5 accepting orders (USA only), In Stock label, ships within 7-10 days",
+        "date": "2026-11-08"
+      }
+    ],
+    "rejected": [
+      {
+        "row": "new AMD EPYC 9996",
+        "reason": "No eBay results; SabrePC out of stock / contact sales; only AMD 1KU list price"
+      },
+      {
+        "row": "new Intel Xeon Platinum 8592+",
+        "url": "https://cloudninjas.com/products/intel-xeon-platinum-8592-64-cores-128-threads-1-90-ghz",
+        "reason": "Condition not stated and price about 12x the historical reference; eBay new results were ES/QS or 8592V"
+      },
+      {
+        "row": "new Fujitsu A64FX / FX700",
+        "reason": "No processor or node listings"
+      },
+      {
+        "row": "new AmpereOne M A192-32M",
+        "url": "https://shop.databitinc.com/Products/overview/M026114271",
+        "reason": "Explicitly out of stock"
+      },
+      {
+        "row": "new AmpereOne A192-32X",
+        "url": "https://www.newegg.com/ampereone-a192-32x-3-2ghz-192-core-276w-lga-5964/p/N82E16819999013",
+        "reason": "Request-a-quote only"
+      },
+      {
+        "row": "new Mixtile Core 3588E 32GB",
+        "url": "https://www.mixtile.com/store/som/core-3588e/",
+        "reason": "All variants is_in_stock=false"
+      },
+      {
+        "row": "new TRIA HMM-IQX 64GB",
+        "url": "https://www.tria-technologies.com/product/tria-hmm-iqx/",
+        "reason": "Quote or contact-vendor only"
+      },
+      {
+        "row": "new Radxa Orion O6 64GB",
+        "url": "https://arace.tech/products/radxa-orion-o6",
+        "reason": "All variants unavailable; no eBay results"
+      },
+      {
+        "row": "new Mac Studio M3 Ultra 512GB",
+        "url": "https://www.ebay.com/itm/206353020184",
+        "reason": "Listed New but MPN G1CEJLL/A is an Apple Certified Refurbished part number; other offers are refurbished; Apple no longer sells M3 Ultra"
+      },
+      {
+        "row": "new Mac Studio M2 Max 32GB/512GB",
+        "url": "https://www.ebay.com/itm/387458187741",
+        "reason": "Local pickup only, seller with no feedback"
+      },
+      {
+        "row": "used Kingston KF432C16RBK2/64",
+        "reason": "No used eBay or Newegg matches"
+      },
+      {
+        "row": "used GIGABYTE R272-P30 / Foxconn Mt. Collins",
+        "reason": "No matching complete servers; only RAM, different models or barebones units"
+      }
+    ],
+    "limitations": [
+      "B&H (Cloudflare) and CDW (Akamai) blocked the built-in browser",
+      "ARACE and BIZON US shipping not priced",
+      "DGX Station GB300 is an OEM build at a starting price"
+    ]
   }
 }

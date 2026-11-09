@@ -28,7 +28,9 @@ Read seller condition notes even when the structured condition is Used. A tested
 broken fan connector and was rejected in favor of a working board. For DDR, compare module count, per-module
 capacity and total capacity: a generic 16GB title conflicted with an item-specific count of 24 modules. Reject
 unresolved contradictions and choose a listing that explicitly states the quantity being priced. Box-only Mac
-listings can match every chip/RAM search term; establish that the computer itself is included.
+listings can match every chip/RAM search term; establish that the computer itself is included. An Apple part
+number beginning with F or G (for example G1CEJLL/A) marks Apple Certified Refurbished stock even when eBay lists it
+as New; record it as refurbished (HWDB used), not new.
 
 Check delivery eligibility separately from currency. The tested Used search included a USD-priced card available
 only for pickup in Belgium. Keep pickup-only offers outside the default US-deliverable comparison. Record item price,
