@@ -1,0 +1,92 @@
+{
+  "scope": "Backfill of rankings with fewer than ten entries after the 2026-11-09 refresh; new configurations only, one accepted offer each. Prices are single live asking offers checked 2026-11-09 (UTC).",
+  "embedded_used": {
+    "accepted": [
+      {
+        "vendor": "NVIDIA",
+        "model": "Nano B01",
+        "memory_gb": 4,
+        "price_usd": 99.0,
+        "source": "https://www.ebay.com/itm/900071774326 https://developer.nvidia.com/embedded/jetson-nano-developer-kit"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "Xavier NX",
+        "memory_gb": 8,
+        "price_usd": 189.0,
+        "source": "https://www.ebay.com/itm/900054523147 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-xavier-series/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Xavier",
+        "memory_gb": 16,
+        "price_usd": 92.0,
+        "source": "https://www.ebay.com/itm/326299605073 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-agx-xavier/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Xavier",
+        "memory_gb": 32,
+        "price_usd": 215.79,
+        "source": "https://www.ebay.com/itm/287672684127 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-agx-xavier/ https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-xavier-series/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Orin",
+        "memory_gb": 32,
+        "price_usd": 1750.0,
+        "source": "https://www.ebay.com/itm/147643537345 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/ https://developer.nvidia.com/embedded/faq"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Orin",
+        "memory_gb": 64,
+        "price_usd": 1999.0,
+        "source": "https://www.ebay.com/itm/407349098851 https://developer.nvidia.com/embedded/faq https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "4B",
+        "memory_gb": 8,
+        "price_usd": 90.0,
+        "source": "https://www.ebay.com/itm/800894122060 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "4B + case",
+        "memory_gb": 2,
+        "price_usd": 85.0,
+        "source": "https://www.ebay.com/itm/305857020383 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html https://magazines-static.raspberrypi.org/books/full_pdfs/000/000/029/original/Pi-Projects5.pdf"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "5",
+        "memory_gb": 2,
+        "price_usd": 89.92,
+        "source": "https://www.ebay.com/itm/336785178624 https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+      }
+    ],
+    "rejected": [
+      {
+        "candidate": "Raspberry Pi 4B 1GB open box",
+        "url": "https://www.ebay.com/itm/237099203951",
+        "reason": "Item specifics contradict a bare board (7 in screen size, All-in-One type); description repeats generic specifics and does not state contents."
+      },
+      {
+        "candidate": "Jetson Xavier NX module P3668 180-13668-DAAA-A03 (8GB)",
+        "url": "https://www.ebay.com/itm/358570036640",
+        "reason": "Live and Used at USD 200 but more expensive than the verified 8GB carrier bundle; 180-13668-DAAA part number does not establish production vs SD-card devkit module; description generic."
+      },
+      {
+        "candidate": "Raspberry Pi 5 2GB + 64GB microSD",
+        "url": "https://www.ebay.com/itm/880093867690",
+        "reason": "Title discloses faulty Ethernet; not a working board."
+      },
+      {
+        "candidate": "Orin NX 16GB used (eBay 820028601363)",
+        "url": "https://www.ebay.com/itm/820028601363",
+        "reason": "Rejected on review: title gives 900-13767-0000-000 (Orin NX 16GB) but item specifics give MPN 900-13767-0010-000, NVIDIA's Orin NX 8GB part number; unresolved contradiction, same as the 2026-11-09 refresh rejection."
+      }
+    ]
+  }
+}
