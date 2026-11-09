@@ -9,9 +9,9 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
   generator reads saved cell values by header name and does not recalculate formulas. `Platform` and `Accelerator`
   rows are ranked only when registered in the overrides file.
 - `data/workbook_overrides.csv`: keyed by `sheet` and `model`; every row must match an existing workbook row. It sets
-  category and condition, and nonempty `memory_gb`, `bandwidth_gbs`, `tops`, `tops_type`, `tops_source`, `price_usd`, `price_date`, `price_basis`,
-  `availability` and `source` replace the workbook values; empty fields keep them. `notes` are appended. Use it for
-  price-only refreshes so the workbook baseline stays untouched.
+  category and condition, and nonempty `memory_gb`, `bandwidth_gbs`, `tops`, `tops_type`, `tops_source`,
+  `price_usd`, `price_date`, `price_basis`, `availability` and `source` replace the workbook values; empty fields keep
+  them. `notes` are appended. Use it for price-only refreshes so the workbook baseline stays untouched.
 - `data/options.csv`: supplemental rows. Categories are `gpu`, `gpu_system`, `cpu`, `ddr`, `cpu_system` and
   `embedded`; conditions are `new` and `used`. Record the exact priced configuration, numeric GB and GBps, USD price,
   ISO price date, price basis, availability and source URLs (space-separated). Leave unknown values empty.
