@@ -191,7 +191,7 @@ class RankingTests(unittest.TestCase):
         row = option(tops=100, tops_type="NVFP4", tops_source="https://example.com/spec")
         text = build_readme.render_table([row], "gpu", "new", "tops", "TOPS")
         self.assertIn("| Rank | Option | TOPS | Type | Price | TOPS/$ | Sources |", text)
-        self.assertIn("| 100.00 | NVFP4 | $100.00 | 1.0000 |", text)
+        self.assertIn("| 100.00 | NVFP4 | $100 | 1.0000 |", text)
         self.assertIn("(<https://example.com/spec>)", text)
         self.assertNotIn("Type", build_readme.render_table([row], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "must be set together"):
@@ -205,6 +205,10 @@ class RankingTests(unittest.TestCase):
         self.assertNotIn("Modules", build_readme.render_table([option()], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "missing memory_type"):
             build_readme.render_rankings([option(category="ddr", modules="2")])
+
+    def test_prices_round_to_whole_dollars(self):
+        self.assertEqual([build_readme.dollars(v) for v in (498.75, 200.5, 179.49, 17499.95)],
+                         ["$499", "$201", "$179", "$17,500"])
 
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:

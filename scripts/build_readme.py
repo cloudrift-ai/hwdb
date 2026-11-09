@@ -5,6 +5,7 @@ import argparse
 import csv
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
+from decimal import Decimal, ROUND_HALF_UP
 from math import isfinite
 from pathlib import Path
 import re
@@ -265,6 +266,11 @@ def escape(value):
         ">", "&gt;").replace("|", "&#124;").replace("\n", " ").replace("\r", " ")
 
 
+def dollars(value):
+    """Whole dollars, rounding halves up (Python's format rounds halves to even)."""
+    return f"${Decimal(str(value)).quantize(Decimal(1), ROUND_HALF_UP):,}"
+
+
 def source_links(source):
     urls = list(dict.fromkeys(re.findall(r"https?://[^\s]+", source)))
     return ", ".join(f"[source{index if len(urls) > 1 else ''}](<{url}>)"
@@ -289,7 +295,7 @@ def render_table(options, category, condition, metric, label):
         type_cell = f" {escape(getattr(option, spec.type_field))} |" if spec.type_field else ""
         sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
         extra_cells = "".join(f" {escape(getattr(option, field))} |" for _, field in extra)
-        lines.append(f"| {rank} | {escape(option.name)} |{extra_cells} {value:,.2f} |{type_cell} ${option.price_usd:,.2f} | "
+        lines.append(f"| {rank} | {escape(option.name)} |{extra_cells} {value:,.2f} |{type_cell} {dollars(option.price_usd)} | "
                      f"{value / option.price_usd:.4f} | {source_links(sources)} |")
     if not top:
         lines += ["", "No qualifying options recorded."]
