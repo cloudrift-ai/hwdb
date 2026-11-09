@@ -8,8 +8,9 @@ Read `README.md` and the current source rows before editing. For price research,
    `price_usd`, `price_date`, `price_basis`, `availability` and `source` supersede workbook values, and `notes` append
    listing details. Retain its category, condition and metric fields. Update the workbook itself when requested,
    or add supplemental hardware rows to `data/options.csv`.
-   Do not duplicate an existing `(category, condition, vendor, model)` across the workbook and CSV.
-   Distinct priced configurations need distinct, explicit model names. An expired offer may be replaced by a
+   Do not duplicate an existing `(category, condition, vendor, model, memory_gb)` across the workbook and CSV.
+   Distinct priced configurations need distinct short names; follow the naming rules in
+   [data conventions](../docs/data-conventions.md#names). An expired offer may be replaced by a
    verified offer for the same configuration; preserve the new seller, source and observation date.
 2. Retain the CSV header and source provenance fields. Convert JSON nulls to empty CSV cells. Put price and spec URLs
    in `source`, separated by spaces, and explain calculations and excluded components in `notes`.

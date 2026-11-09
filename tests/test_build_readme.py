@@ -105,18 +105,17 @@ class RankingTests(unittest.TestCase):
         self.assertEqual(by_model["Radeon RX 6800"].condition, "new")
         self.assertEqual(by_model["EPYC 7742"].condition, "used")
         self.assertEqual(by_model["DGX Station GB300"].memory_gb, 252)
-        self.assertEqual(by_model["Orion O6 64GB"].category, "embedded")
+        self.assertEqual(by_model["Orion O6"].category, "embedded")
         self.assertEqual(by_model["R272-P30; M128-30; 256GB / 24SFF"].category, "cpu_system")
 
     def test_v100_forms_are_distinct_candidates(self):
         root = SCRIPT.parents[1]
         rows = build_readme.workbook_options(root / "hardware_database.xlsx")
         rows += build_readme.csv_options(root / "data/options.csv")
-        variants = {o.model for o in rows if o.category == "gpu" and o.condition == "used"}
+        variants = {(o.model, o.memory_gb) for o in rows if o.category == "gpu" and o.condition == "used"}
         self.assertTrue({
-            "Tesla V100 PCIe 16GB", "Tesla V100 PCIe 32GB", "Tesla V100 SXM2 16GB",
-            "Tesla V100 SXM2 32GB", "Tesla V100 SXM3 32GB",
-            "Tesla V100 PCIe FHHL 16GB (HPE Q8Z50A)", "Tesla V100S PCIe 32GB",
+            ("V100 PCIe", 16), ("V100 PCIe", 32), ("V100 SXM2", 16), ("V100 SXM2", 32), ("V100 SXM3", 32),
+            ("V100 PCIe FHHL", 16), ("V100S PCIe", 32), ("V100 SXM2 + adapter", 16),
         }.issubset(variants))
 
     def test_workbook_price_override_supersedes_only_nonempty_fields(self):
@@ -200,8 +199,8 @@ class RankingTests(unittest.TestCase):
     def test_tops_table_shows_type_and_requires_it(self):
         row = option(tops=100, tops_type="NVFP4", tops_source="https://example.com/spec")
         text = build_readme.render_table([row], "gpu", "new", "tops", "TOPS")
-        self.assertIn("| | Option | TOPS | Type | Price | TOPS/$ | Sources |", text)
-        self.assertIn("| 100.00 | NVFP4 | $100 | 1.0000 |", text)
+        self.assertIn("| | Option | GB | TOPS | Type | Price | TOPS/$ | Sources |", text)
+        self.assertIn("| 16 | 100.00 | NVFP4 | $100 | 1.0000 |", text)
         self.assertIn("(<https://example.com/spec>)", text)
         self.assertNotIn("Type", build_readme.render_table([row], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "must be set together"):

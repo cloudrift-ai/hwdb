@@ -31,7 +31,7 @@ class Metric:
 METRICS = (
     Metric("memory_gb", "GB", decimals=0),
     Metric("bandwidth_gbs", "GBps", context=("memory_gb",)),
-    Metric("tops", "TOPS", type_field="tops_type", source_field="tops_source"),
+    Metric("tops", "TOPS", context=("memory_gb",), type_field="tops_type", source_field="tops_source"),
 )
 METRIC_TEXT_FIELDS = tuple(field for metric in METRICS for field in (metric.type_field, metric.source_field) if field)
 DETAIL_FIELDS = ("modules", "memory_type")  # optional CSV columns describing the priced configuration
@@ -190,7 +190,10 @@ def workbook_options(path):
                             metrics[field] = override[field]
                     notes = " ".join(filter(None, [notes, override.get("notes")]))
                 options.append(Option(
-                    category=category, condition=condition, vendor=str(row["Vendor"]), model=str(model),
+                    category=category, condition=condition,
+                    # Display names may be shortened in the overrides without renaming the workbook row.
+                    vendor=(override or {}).get("display_vendor") or str(row["Vendor"]),
+                    model=(override or {}).get("display_model") or str(model),
                     price_usd=number(row.get("Price (USD)")), price_date=date_text(row.get("Price date")),
                     price_basis=basis, availability=str(row.get("Availability") or ""),
                     source=str(row.get("Source") or ""), notes=notes,
@@ -243,7 +246,8 @@ def validate_category_columns(options):
 def validate_unique(options):
     seen = set()
     for option in options:
-        key = (option.category, option.condition, option.vendor.casefold(), option.model.casefold())
+        # Memory size distinguishes variants that share a short display name, e.g. V100 PCIe 16GB and 32GB.
+        key = (option.category, option.condition, option.vendor.casefold(), option.model.casefold(), option.memory_gb)
         if key in seen:
             raise ValueError(f"Duplicate option: {option.category}/{option.condition}/{option.name}")
         seen.add(key)

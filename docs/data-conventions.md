@@ -9,14 +9,25 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
   generator reads saved cell values by header name and does not recalculate formulas. `Platform` and `Accelerator`
   rows are ranked only when registered in the overrides file.
 - `data/workbook_overrides.csv`: keyed by `sheet` and `model`; every row must match an existing workbook row. It sets
-  category and condition, and nonempty `memory_gb`, `bandwidth_gbs`, `tops`, `tops_type`, `tops_source`,
-  `price_usd`, `price_date`, `price_basis`, `availability` and `source` replace the workbook values; empty fields keep
-  them. `notes` are appended. Use it for price-only refreshes so the workbook baseline stays untouched.
+  category, condition and optional display names, and nonempty `memory_gb`, `bandwidth_gbs`, `tops`, `tops_type`,
+  `tops_source`, `price_usd`, `price_date`, `price_basis`, `availability` and `source` replace the workbook values;
+  empty fields keep them. `notes` are appended. Use it for price-only refreshes so the workbook baseline stays untouched.
 - `data/options.csv`: supplemental rows. Categories are `gpu`, `gpu_system`, `cpu`, `ddr`, `cpu_system` and
   `embedded`; conditions are `new` and `used`. Record the exact priced configuration, numeric GB and GBps, USD price,
   ISO price date, price basis, availability and source URLs (space-separated). Leave unknown values empty.
   DDR rows also require `modules` and `memory_type`.
-- The same category, condition, vendor and model may not appear in both the workbook and the CSV.
+- The same category, condition, vendor, model and memory size may not appear twice across the workbook and the CSV.
+
+## Names
+
+- `model` is the short display name shown in the README, ideally at most 27 characters with the vendor. Drop what
+  other columns show (memory size, DDR module count and type), storage, retail part numbers and redundant branding
+  (GeForce, Tesla, Jetson, PowerEdge, ProLiant, Vengeance). Keep what tells configurations apart: form factor (PCIe,
+  SXM2, FHHL), CPU count and model for systems, adapter or kit bundles, and the exact SKU for DDR.
+- Record the full listing name, part numbers and other configuration details in notes, for example
+  `Full listing name: ...`.
+- Variants that differ only in memory size share a model and are told apart by `memory_gb`.
+- Workbook rows keep their workbook names; set `display_vendor` and `display_model` in the overrides to shorten them.
 - Ranked metrics, category tables and worksheet columns are declared once in `METRICS`, `CATEGORIES` and `SHEETS` in
   [scripts/build_readme.py](../scripts/build_readme.py).
 
