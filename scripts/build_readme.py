@@ -47,7 +47,7 @@ CATEGORIES = {
     "cpu": Category("CPU", {"bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "gpu_system": Category("GPU system", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "ddr": Category("DDR memory", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"},
-                    columns=(("Modules", "modules"), ("Type", "memory_type"))),
+                    columns=(("#", "modules"), ("Type", "memory_type"))),
     "cpu_system": Category("CPU systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "embedded": Category("Embedded systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
 }
