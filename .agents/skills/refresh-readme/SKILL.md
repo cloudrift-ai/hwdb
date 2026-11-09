@@ -8,7 +8,7 @@ description: >-
 # Refresh HWDB rankings
 
 Apply [the refresh contract](../../../prompts/refresh-readme.md). It owns input selection, evidence checks,
-generation and verification. Read the [README](../../../README.md) for the current data schema and category rules.
+generation and verification. Read [data conventions](../../../docs/data-conventions.md) for the current data schema and category rules.
 
 When the request includes finding or rechecking prices, first use
 [research-hardware](../research-hardware/SKILL.md). A rebuild alone does not require network research and must not

@@ -7,7 +7,7 @@ description: >-
 
 # Research hardware listings
 
-Read the repository [README](../../../README.md) for category definitions and metric conventions.
+Read [data conventions](../../../docs/data-conventions.md) for category definitions and metric conventions.
 Then apply the [listing contract](../../../prompts/research-hardware/listings.md), choosing store prompts from the
 [tested store catalog](../../../docs/stores.md). Read only the store prompts relevant to the requested category.
 

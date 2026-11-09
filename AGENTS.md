@@ -1,7 +1,7 @@
 # AGENTS.md
 
 HWDB compares hardware memory capacity and theoretical memory bandwidth per US dollar.
-Read `README.md` first; it is the project overview and index for data, workflows and store research.
+Read `README.md` first for the project overview, then `docs/data-conventions.md` before changing data.
 
 ## Communication
 
@@ -27,8 +27,8 @@ Distinguish advertised specifications, theoretical calculations and measured per
 - Preserve the flat New/Used sections and top-ten rankings, including CPU systems after DDR and used embedded systems.
   Keep PCIe, SXM, memory sizes and adapter bundles distinct. CPU prices exclude RAM; CPU systems include installed RAM.
 
-The README owns the detailed category definitions and bandwidth conventions. Follow them rather than maintaining
-another copy here. Leave unknown metrics empty and report insufficient coverage instead of inventing entries.
+`docs/data-conventions.md` owns the detailed category definitions and bandwidth conventions; the README keeps only
+a reader-facing summary. Follow them rather than maintaining another copy here. Leave unknown metrics empty and report insufficient coverage instead of inventing entries.
 
 ## Research and prompts
 
@@ -49,7 +49,7 @@ and store access findings in the store catalog. Add provider-specific agent wrap
 them; wrappers should reference shared prompts rather than copy their instructions.
 When research reveals a repeatable retrieval issue or a better working route, update the owning store prompt and
 catalog during that task. Update shared prompts, affected skills and this file when their guidance changes; update
-README prose through its template. Keep examples dated and distinguish tested behavior from untested API proposals.
+README prose through its template. Keep the README for readers of the rankings, without generator internals. Keep examples dated and distinguish tested behavior from untested API proposals.
 Exact SKU suffixes, kit quantities, CPU sample/lock status and installed system RAM matter. Read item specifics or
 seller configuration details when the title is ambiguous; a matching search query does not establish a matching SKU.
 

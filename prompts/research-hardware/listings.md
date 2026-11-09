@@ -2,7 +2,7 @@
 
 Inputs: a hardware query, optional HWDB category and condition, optional store selection, and a candidate limit
 (default ten). Cover both new and used when no condition is specified. Use the category definitions and bandwidth
-conventions in [README](../../README.md). Select stores from [the catalog](../../docs/stores.md) and apply their
+conventions in [data conventions](../../docs/data-conventions.md). Select stores from [the catalog](../../docs/stores.md) and apply their
 linked prompts in addition to this contract.
 
 ## Evidence and eligibility
