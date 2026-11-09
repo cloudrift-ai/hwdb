@@ -211,7 +211,7 @@ class RankingTests(unittest.TestCase):
         kit = option(category="ddr", model="Kit", modules="2", memory_type="DDR4-3200")
         text = build_readme.render_table([kit], "ddr", "new", "memory_gb", "RAM")
         self.assertIn("| Rank | Option | # | Type | GB | Price | GB/$ | Sources |", text)
-        self.assertIn("| Vendor Kit | 2 | DDR4-3200 | 16.00 |", text)
+        self.assertIn("| Vendor Kit | 2 | DDR4-3200 | 16 |", text)
         self.assertNotIn("| # |", build_readme.render_table([option()], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "missing memory_type"):
             build_readme.render_rankings([option(category="ddr", modules="2")])

@@ -21,13 +21,14 @@ CONDITIONS = ("new", "used")
 class Metric:
     field: str
     unit: str
+    decimals: int = 2  # displayed precision of the metric value
     type_field: str | None = None  # Option field naming the data type, shown as a Type column
     source_field: str | None = None  # Option field with metric-specific source URLs
 
 
 # Ranked metrics in table order. Each is an Option field, an optional CSV column and an optional workbook column.
 METRICS = (
-    Metric("memory_gb", "GB"),
+    Metric("memory_gb", "GB", decimals=0),
     Metric("bandwidth_gbs", "GBps"),
     Metric("tops", "TOPS", type_field="tops_type", source_field="tops_source"),
 )
@@ -313,7 +314,7 @@ def render_table(options, category, condition, metric, label):
         type_cell = f" {escape(getattr(option, spec.type_field))} |" if spec.type_field else ""
         sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
         extra_cells = "".join(f" {escape(getattr(option, field))} |" for _, field in extra)
-        lines.append(f"| {rank} | {name_cell(option.name)} |{extra_cells} {value:,.2f} |{type_cell} {dollars(option.price_usd)} | "
+        lines.append(f"| {rank} | {name_cell(option.name)} |{extra_cells} {value:,.{spec.decimals}f} |{type_cell} {dollars(option.price_usd)} | "
                      f"{value / option.price_usd:.4f} | {source_links(sources)} |")
     if not top:
         lines += ["", "No qualifying options recorded."]
