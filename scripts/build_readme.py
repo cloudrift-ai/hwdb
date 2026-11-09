@@ -20,13 +20,17 @@ CONDITIONS = ("new", "used")
 class Metric:
     field: str
     unit: str
+    type_field: str | None = None  # Option field naming the data type, shown as a Type column
+    source_field: str | None = None  # Option field with metric-specific source URLs
 
 
 # Ranked metrics in table order. Each is an Option field, an optional CSV column and an optional workbook column.
 METRICS = (
     Metric("memory_gb", "GB"),
     Metric("bandwidth_gbs", "GBps"),
+    Metric("tops", "TOPS", type_field="tops_type", source_field="tops_source"),
 )
+METRIC_TEXT_FIELDS = tuple(field for metric in METRICS for field in (metric.type_field, metric.source_field) if field)
 
 
 @dataclass(frozen=True)
@@ -36,12 +40,12 @@ class Category:
 
 
 CATEGORIES = {
-    "gpu": Category("GPU", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth"}),
-    "cpu": Category("CPU", {"bandwidth_gbs": "Bandwidth"}),
-    "gpu_system": Category("GPU system", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth"}),
+    "gpu": Category("GPU", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
+    "cpu": Category("CPU", {"bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
+    "gpu_system": Category("GPU system", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "ddr": Category("DDR memory", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"}),
-    "cpu_system": Category("CPU systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"}),
-    "embedded": Category("Embedded systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"}),
+    "cpu_system": Category("CPU systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
+    "embedded": Category("Embedded systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
 }
 
 
@@ -83,6 +87,9 @@ class Option:
     availability: str
     source: str
     notes: str = ""
+    tops: float | None = None
+    tops_type: str = ""
+    tops_source: str = ""
 
     @property
     def name(self):
@@ -170,9 +177,9 @@ def workbook_options(path):
                         if override.get(field):
                             row[column] = override[field]
                     basis = str(row.get("Price basis") or "")
-                    for metric in METRICS:
-                        if override.get(metric.field):
-                            metrics[metric.field] = override[metric.field]
+                    for field in [metric.field for metric in METRICS] + list(METRIC_TEXT_FIELDS):
+                        if override.get(field):
+                            metrics[field] = override[field]
                     notes = " ".join(filter(None, [notes, override.get("notes")]))
                 options.append(Option(
                     category=category, condition=condition, vendor=str(row["Vendor"]), model=str(model),
@@ -180,6 +187,7 @@ def workbook_options(path):
                     price_basis=basis, availability=str(row.get("Availability") or ""),
                     source=str(row.get("Source") or ""), notes=notes,
                     **{metric.field: number(metrics.get(metric.field)) for metric in METRICS},
+                    **{field: str(metrics.get(field) or "") for field in METRIC_TEXT_FIELDS},
                 ))
     finally:
         workbook.close()
@@ -203,10 +211,18 @@ def csv_options(path):
                     price_date=date_text(row["price_date"]), price_basis=row["price_basis"],
                     availability=row["availability"], source=row["source"], notes=row["notes"],
                     **{metric.field: number(row.get(metric.field)) for metric in METRICS},
+                    **{field: row.get(field) or "" for field in METRIC_TEXT_FIELDS},
                 ))
             except (ValueError, KeyError) as error:
                 raise ValueError(f"{path}:{line}: {error}") from error
     return result
+
+
+def validate_metric_types(options):
+    for option in options:
+        for metric in METRICS:
+            if metric.type_field and (getattr(option, metric.field) is None) != (not getattr(option, metric.type_field)):
+                raise ValueError(f"{option.name}: {metric.field} and {metric.type_field} must be set together")
 
 
 def validate_unique(options):
@@ -245,16 +261,20 @@ def source_links(source):
 
 def render_table(options, category, condition, metric, label):
     top, count = top_ten(options, category, condition, metric)
-    unit = next(m.unit for m in METRICS if m.field == metric)
+    spec = next(m for m in METRICS if m.field == metric)
+    unit = spec.unit
     lines = [f"### {label} per $", ""]
     if count < 10:
         lines += [f"Coverage: {count} qualifying option{'s' if count != 1 else ''} after availability filtering; fewer than ten recorded.", ""]
-    lines += [f"| Rank | Option | {unit} | Price | {unit}/$ | Sources |",
-              "| ---: | --- | ---: | ---: | ---: | --- |"]
+    type_header, type_rule = (" Type |", " --- |") if spec.type_field else ("", "")
+    lines += [f"| Rank | Option | {unit} |{type_header} Price | {unit}/$ | Sources |",
+              f"| ---: | --- | ---: |{type_rule} ---: | ---: | --- |"]
     for rank, option in enumerate(top, 1):
         value = getattr(option, metric)
-        lines.append(f"| {rank} | {escape(option.name)} | {value:,.2f} | ${option.price_usd:,.2f} | "
-                     f"{value / option.price_usd:.4f} | {source_links(option.source)} |")
+        type_cell = f" {escape(getattr(option, spec.type_field))} |" if spec.type_field else ""
+        sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
+        lines.append(f"| {rank} | {escape(option.name)} | {value:,.2f} |{type_cell} ${option.price_usd:,.2f} | "
+                     f"{value / option.price_usd:.4f} | {source_links(sources)} |")
     if not top:
         lines += ["", "No qualifying options recorded."]
     return "\n".join(lines)
@@ -262,6 +282,7 @@ def render_table(options, category, condition, metric, label):
 
 def render_rankings(options, updated_at=None):
     validate_unique(options)
+    validate_metric_types(options)
     if updated_at is None:
         updated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     lines = ["<!-- Generated by scripts/build_readme.py. Edit source data, not these tables. -->",

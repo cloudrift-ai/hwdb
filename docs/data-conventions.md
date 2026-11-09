@@ -9,7 +9,7 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
   generator reads saved cell values by header name and does not recalculate formulas. `Platform` and `Accelerator`
   rows are ranked only when registered in the overrides file.
 - `data/workbook_overrides.csv`: keyed by `sheet` and `model`; every row must match an existing workbook row. It sets
-  category and condition, and nonempty `memory_gb`, `bandwidth_gbs`, `price_usd`, `price_date`, `price_basis`,
+  category and condition, and nonempty `memory_gb`, `bandwidth_gbs`, `tops`, `tops_type`, `tops_source`, `price_usd`, `price_date`, `price_basis`,
   `availability` and `source` replace the workbook values; empty fields keep them. `notes` are appended. Use it for
   price-only refreshes so the workbook baseline stays untouched.
 - `data/options.csv`: supplemental rows. Categories are `gpu`, `gpu_system`, `cpu`, `ddr`, `cpu_system` and
@@ -18,6 +18,18 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
 - The same category, condition, vendor and model may not appear in both the workbook and the CSV.
 - Ranked metrics, category tables and worksheet columns are declared once in `METRICS`, `CATEGORIES` and `SHEETS` in
   [scripts/build_readme.py](../scripts/build_readme.py).
+
+## Compute (TOPS)
+
+- `tops` is dense peak throughput in TOPS (TFLOPS for floating-point types) for the fastest natively supported
+  tensor/matrix data type, named in `tops_type` (NVFP4, FP4, FP8, INT4, INT8, BF16, FP16, FP32). Set both or neither.
+  `tops_source` holds the specification URLs; put the basis and any formula in notes.
+- Use vendor figures when published. Halve figures quoted with structured sparsity.
+- Without tensor/matrix units, use the fastest native arithmetic type (packed FP16, INT8 dot product, else FP32).
+- CPUs: calculated per socket as cores × base clock × ops/cycle/core, a multiply-accumulate counting as two ops,
+  using AMX, VNNI/SDOT or SIMD FMA as the hardware supports. Systems sum all sockets or accelerators.
+- Jetson modules use NVIDIA's combined GPU + DLA figure. Apple Macs use the Neural Engine figure Apple publishes.
+- Workbook rows take TOPS from `data/workbook_overrides.csv`; the workbook has no TOPS column.
 
 ## Availability and condition
 

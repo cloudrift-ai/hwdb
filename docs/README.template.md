@@ -1,16 +1,20 @@
 # HWDB
 
-HWDB ranks hardware by memory capacity and theoretical memory bandwidth per US dollar. Each table lists up to ten
+HWDB ranks hardware by memory capacity, theoretical memory bandwidth and peak compute (TOPS) per US dollar. Each table lists up to ten
 in-stock offers recorded in this repository; it is not a survey of the whole market.
 
 ## Reading the tables
 
-- **GB/$** and **GBps/$**: higher is better. Ties go to the lower price.
+- **GB/$**, **GBps/$** and **TOPS/$**: higher is better. Ties go to the lower price.
 - **Price** is one verified asking offer for the exact configuration, excluding shipping and tax. It is not a market
   median. Out-of-stock, sold and ended offers are excluded. Listings can change after the "Last updated" time.
 - **New / Used** describes the offer. Refurbished counts as used.
 - **Bandwidth** is the theoretical peak from specifications, not a measurement. Multi-device and multi-socket figures
   are aggregates, not one unified pool.
+- **TOPS** is dense peak throughput (no sparsity) for the fastest natively supported tensor data type, shown in the
+  **Type** column (for example NVFP4, FP8, INT8). Devices without tensor units use their fastest native type. CPU
+  figures are calculated at base clock from the instruction set (AMX, VNNI, SIMD FMA); multi-device systems are summed.
+  TOPS across types are not equivalent work: an NVFP4 TOPS is not an FP16 TFLOPS.
 - A table with fewer than ten rows has a coverage note; there were not enough verified offers.
 
 ## Categories
@@ -20,7 +24,7 @@ in-stock offers recorded in this repository; it is not a survey of the whole mar
 - **GPU systems**: complete GPU and AI-accelerator systems, including unified-memory machines. Capacity is
   GPU-accessible memory, counted once.
 - **CPU**: processor-only prices, excluding RAM and board. Bandwidth assumes every memory channel is populated.
-- **DDR memory**: priced DIMMs and kits. Bandwidth is transfer rate × channels; a two-DIMM kit counts as two channels.
+- **DDR memory**: priced DIMMs and kits; no compute table. Bandwidth is transfer rate × channels; a two-DIMM kit counts as two channels.
 - **CPU systems**: complete servers including installed RAM. Capacity is the installed RAM, not the platform maximum.
   Bandwidth follows the installed DIMMs; a server without enough configuration detail appears only in the capacity
   table.

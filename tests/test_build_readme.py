@@ -70,7 +70,7 @@ class RankingTests(unittest.TestCase):
 
     def test_all_requested_sections_are_flattened(self):
         text = build_readme.render_rankings([])
-        self.assertEqual(text.count("### "), 22)
+        self.assertEqual(text.count("### "), 32)
         self.assertEqual(text.count("## GPU Used"), 1)
         self.assertEqual(text.count("## CPU Used"), 1)
         self.assertEqual(len([line for line in text.splitlines() if line.startswith("## ")]), 12)
@@ -186,6 +186,16 @@ class RankingTests(unittest.TestCase):
         headings = [line for line in text.splitlines() if line.startswith("### ")]
         self.assertEqual(headings, ["### VRAM per $", "### Cost per $"] * 2)
         self.assertIn("| Rank | Option | USD | Price | USD/$ |", text)
+
+    def test_tops_table_shows_type_and_requires_it(self):
+        row = option(tops=100, tops_type="NVFP4", tops_source="https://example.com/spec")
+        text = build_readme.render_table([row], "gpu", "new", "tops", "TOPS")
+        self.assertIn("| Rank | Option | TOPS | Type | Price | TOPS/$ | Sources |", text)
+        self.assertIn("| 100.00 | NVFP4 | $100.00 | 1.0000 |", text)
+        self.assertIn("(<https://example.com/spec>)", text)
+        self.assertNotIn("Type", build_readme.render_table([row], "gpu", "new", "memory_gb", "VRAM"))
+        with self.assertRaisesRegex(ValueError, "must be set together"):
+            build_readme.render_rankings([option(tops=100)])
 
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:
