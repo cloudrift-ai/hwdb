@@ -25,7 +25,7 @@ class Metric:
 # Ranked metrics in table order. Each is an Option field, an optional CSV column and an optional workbook column.
 METRICS = (
     Metric("memory_gb", "GB"),
-    Metric("bandwidth_gbs", "GB/s"),
+    Metric("bandwidth_gbs", "GBps"),
 )
 
 
@@ -249,13 +249,12 @@ def render_table(options, category, condition, metric, label):
     lines = [f"### {label} per $", ""]
     if count < 10:
         lines += [f"Coverage: {count} qualifying option{'s' if count != 1 else ''} after availability filtering; fewer than ten recorded.", ""]
-    lines += [f"| Rank | Option | {unit} | Price (USD) | {unit}/$ | Availability | Sources |",
-              "| ---: | --- | ---: | ---: | ---: | --- | --- |"]
+    lines += [f"| Rank | Option | {unit} | Price (USD) | {unit}/$ | Sources |",
+              "| ---: | --- | ---: | ---: | ---: | --- |"]
     for rank, option in enumerate(top, 1):
         value = getattr(option, metric)
         lines.append(f"| {rank} | {escape(option.name)} | {value:,.2f} | ${option.price_usd:,.2f} | "
-                     f"{value / option.price_usd:.4f} | {escape(option.availability) or '—'} | "
-                     f"{source_links(option.source)} |")
+                     f"{value / option.price_usd:.4f} | {source_links(option.source)} |")
     if not top:
         lines += ["", "No qualifying options recorded."]
     return "\n".join(lines)
