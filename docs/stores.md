@@ -64,6 +64,15 @@ snapshots and exclude any separately shown shipping or tax.
   availability. Ships from Hong Kong; US shipping appears only at checkout.
 - Mixtile (tested 2026-11-08): the WooCommerce `data-product_variations` attribute on `form.variations_form` gives
   per-variant SKU and `is_in_stock`.
+- PiShop US and CanaKit (tested 2026-11-09) work with plain `curl`. PiShop's `var BCData` JSON gives `instock`,
+  `purchasable`, `stock` and the USD price (the visible "Current Stock" line sits in an HTML comment). CanaKit pages
+  show "In Stock" and per-option prices; use the board-only option, not kits. ARACE's `/products/<handle>.js` also
+  works with plain `curl`.
+- Lenovo and Dell specifications (tested 2026-11-09): Lenovo Press product guides (`lenovopress.lenovo.com/lpNNNN`)
+  give per-model DIMM counts and per-CPU memory speeds; Lenovo PSREF renders by JavaScript and returns empty pages.
+  Dell technical-guide PDFs return Access Denied to plain `curl` but download through a fetch tool. Newegg's Dell
+  PowerEdge pages were quote-only or out of stock.
+- Seeed product pages return a Cloudflare 403 to `curl` and its search needs JavaScript; use the browser.
 - B&H (Cloudflare challenge) and CDW (Akamai Access Denied) blocked the built-in browser on 2026-11-08. Newegg and
   NeweggBusiness often show high-end server CPUs and GB300 workstations with "Request a quote" only; treat those as
   quote-only, not offers.

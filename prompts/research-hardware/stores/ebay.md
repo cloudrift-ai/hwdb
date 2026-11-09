@@ -73,3 +73,10 @@ When several agents share one browser, eBay rate-limits same-origin fetches with
 per 30-60 seconds under load), retry with backoff, and run long fetch queues in the background on `window` because
 the JavaScript tool times out after 45 seconds. Read seller descriptions for "opened box" and Apple Certified
 Refurbished disclosures; HWDB treats opened-box and refurbished stock as used.
+Tested in the 2026-11-09 backfill: after about a dozen fetches, same-origin `fetch('/itm/<id>')` can stay 403 even
+after backoff while navigating the tab to the item page still works; use navigation as the fallback. Item specifics
+may be absent from `.ux-layout-section-evo`; read `.x-about-this-item` and the schema `itemCondition` and
+`availability` in the raw HTML. Apple part numbers in titles or descriptions tell stock apart: a G prefix (for
+example G1JVYLL/A) is Apple Certified Refurbished even when listed New; Z prefixes are build-to-order units. EU
+sellers list Dell Smart Selection servers in USD with full specifications in the description; record that they ship
+from abroad with buyer-paid import duties.
