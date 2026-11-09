@@ -34,7 +34,7 @@ METRICS = (
     Metric("tops", "TOPS", context=("memory_gb",), type_field="tops_type", source_field="tops_source"),
 )
 METRIC_TEXT_FIELDS = tuple(field for metric in METRICS for field in (metric.type_field, metric.source_field) if field)
-DETAIL_FIELDS = ("modules", "memory_type")  # optional CSV columns describing the priced configuration
+DETAIL_FIELDS = ("modules", "memory_type", "series")  # optional CSV columns describing the priced configuration
 
 
 @dataclass(frozen=True)
@@ -42,6 +42,7 @@ class Category:
     title: str
     tables: dict[str, str]  # metric field -> table label; a missing metric gets no table
     columns: tuple[tuple[str, str], ...] = ()  # (header, Option field) shown after Option; values required
+    collapse_model: bool = False  # show vendor and series, with the model (e.g. a kit SKU) in a collapsed part
 
 
 CATEGORIES = {
@@ -49,7 +50,7 @@ CATEGORIES = {
     "cpu": Category("CPU", {"bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "gpu_system": Category("GPU system", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "ddr": Category("DDR memory", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"},
-                    columns=(("#", "modules"), ("Type", "memory_type"))),
+                    columns=(("#", "modules"), ("Type", "memory_type")), collapse_model=True),
     "cpu_system": Category("CPU systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
     "embedded": Category("Embedded systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth", "tops": "TOPS"}),
 }
@@ -98,6 +99,7 @@ class Option:
     tops_source: str = ""
     modules: str = ""
     memory_type: str = ""
+    series: str = ""  # product line, e.g. Vengeance LPX; shown instead of the model when the category collapses it
 
     @property
     def name(self):
@@ -295,6 +297,13 @@ def table_row(cells):
                           for cell in cells) + "|"
 
 
+def option_cell(option):
+    if CATEGORIES[option.category].collapse_model:
+        summary = " ".join(filter(None, [option.vendor, option.series]))
+        return collapsible(escape(summary), escape(option.model))
+    return name_cell(option.name)
+
+
 def name_cell(name):
     if len(name) <= NAME_WIDTH:
         return escape(name)
@@ -334,7 +343,7 @@ def render_table(options, category, condition, metric, label):
         value = getattr(option, metric)
         sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
         lines.append(table_row(
-            [str(rank), name_cell(option.name)]
+            [str(rank), option_cell(option)]
             + [escape(getattr(option, field)) for _, field in extra]
             + [format_value(getattr(option, m.field), m) for m in context]
             + [format_value(value, spec)]

@@ -220,10 +220,10 @@ class RankingTests(unittest.TestCase):
             build_readme.render_rankings([option(tops=100)])
 
     def test_ddr_tables_show_modules_and_type(self):
-        kit = option(category="ddr", model="Kit", modules="2", memory_type="DDR4-3200")
+        kit = option(category="ddr", model="KIT-SKU", series="Line", modules="2", memory_type="DDR4-3200")
         text = plain_render_table([kit], "ddr", "new", "memory_gb", "RAM")
         self.assertIn("| | Option | # | Type | GB | Price | GB/$ | Sources |", text)
-        self.assertIn("| Vendor Kit | 2 | DDR4-3200 | 16 |", text)
+        self.assertIn("| <details><summary>Vendor Line</summary>KIT-SKU</details> | 2 | DDR4-3200 | 16 |", text)
         self.assertNotIn("| # |", plain_render_table([option()], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "missing memory_type"):
             build_readme.render_rankings([option(category="ddr", modules="2")])
