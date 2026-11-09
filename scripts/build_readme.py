@@ -315,7 +315,7 @@ def render_table(options, category, condition, metric, label):
     context = [m for m in METRICS if m.field in spec.context and m.field in CATEGORIES[category].tables]
     extra_header += "".join(f" {m.unit} |" for m in context)
     extra_rule += " ---: |" * len(context)
-    lines += [f"| Rank | Option |{extra_header} {unit} |{type_header} Price | {unit}/$ | Sources |",
+    lines += [f"| | Option |{extra_header} {unit} |{type_header} Price | {unit}/$ | Sources |",
               f"| ---: | --- |{extra_rule} ---: |{type_rule} ---: | ---: | --- |"]
     for rank, option in enumerate(top, 1):
         value = getattr(option, metric)

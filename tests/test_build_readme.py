@@ -195,12 +195,12 @@ class RankingTests(unittest.TestCase):
             text = build_readme.render_rankings([option()])
         headings = [line for line in text.splitlines() if line.startswith("### ")]
         self.assertEqual(headings, ["### VRAM per $", "### Cost per $"] * 2)
-        self.assertIn("| Rank | Option | USD | Price | USD/$ |", text)
+        self.assertIn("| | Option | USD | Price | USD/$ |", text)
 
     def test_tops_table_shows_type_and_requires_it(self):
         row = option(tops=100, tops_type="NVFP4", tops_source="https://example.com/spec")
         text = build_readme.render_table([row], "gpu", "new", "tops", "TOPS")
-        self.assertIn("| Rank | Option | TOPS | Type | Price | TOPS/$ | Sources |", text)
+        self.assertIn("| | Option | TOPS | Type | Price | TOPS/$ | Sources |", text)
         self.assertIn("| 100.00 | NVFP4 | $100 | 1.0000 |", text)
         self.assertIn("(<https://example.com/spec>)", text)
         self.assertNotIn("Type", build_readme.render_table([row], "gpu", "new", "memory_gb", "VRAM"))
@@ -210,7 +210,7 @@ class RankingTests(unittest.TestCase):
     def test_ddr_tables_show_modules_and_type(self):
         kit = option(category="ddr", model="Kit", modules="2", memory_type="DDR4-3200")
         text = build_readme.render_table([kit], "ddr", "new", "memory_gb", "RAM")
-        self.assertIn("| Rank | Option | # | Type | GB | Price | GB/$ | Sources |", text)
+        self.assertIn("| | Option | # | Type | GB | Price | GB/$ | Sources |", text)
         self.assertIn("| Vendor Kit | 2 | DDR4-3200 | 16 |", text)
         self.assertNotIn("| # |", build_readme.render_table([option()], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "missing memory_type"):
@@ -223,11 +223,11 @@ class RankingTests(unittest.TestCase):
     def test_bandwidth_tables_show_capacity_where_ranked(self):
         text = build_readme.render_table([option(), option(model="No size", memory_gb=None)],
                                          "gpu", "new", "bandwidth_gbs", "Bandwidth")
-        self.assertIn("| Rank | Option | GB | GBps | Price | GBps/$ | Sources |", text)
+        self.assertIn("| | Option | GB | GBps | Price | GBps/$ | Sources |", text)
         self.assertIn("| Vendor Model | 16 | 256.00 |", text)
         self.assertIn("| Vendor No size | — | 256.00 |", text)
         cpu = build_readme.render_table([option(category="cpu")], "cpu", "new", "bandwidth_gbs", "Bandwidth")
-        self.assertIn("| Rank | Option | GBps |", cpu)
+        self.assertIn("| | Option | GBps |", cpu)
 
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:
