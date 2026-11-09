@@ -271,10 +271,27 @@ def dollars(value):
     return f"${Decimal(str(value)).quantize(Decimal(1), ROUND_HALF_UP):,}"
 
 
+NAME_WIDTH = 32  # longer option names collapse so each table row stays about one line on GitHub
+
+
+def collapsible(summary, body):
+    return f"<details><summary>{summary}</summary>{body}</details>"
+
+
+def name_cell(name):
+    if len(name) <= NAME_WIDTH:
+        return escape(name)
+    head = name[:NAME_WIDTH - 1]
+    head = head.rsplit(" ", 1)[0] if " " in head else head
+    return collapsible(f"{escape(head)}…", escape(name))
+
+
 def source_links(source):
     urls = list(dict.fromkeys(re.findall(r"https?://[^\s]+", source)))
-    return ", ".join(f"[source{index if len(urls) > 1 else ''}](<{url}>)"
-                     for index, url in enumerate(urls, 1)) or "—"
+    if len(urls) <= 1:
+        return "".join(f"[source](<{url}>)" for url in urls) or "—"
+    links = "<br>".join(f"[source{index}](<{url}>)" for index, url in enumerate(urls, 1))
+    return collapsible(f"{len(urls)} sources", links)
 
 
 def render_table(options, category, condition, metric, label):
@@ -295,7 +312,7 @@ def render_table(options, category, condition, metric, label):
         type_cell = f" {escape(getattr(option, spec.type_field))} |" if spec.type_field else ""
         sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
         extra_cells = "".join(f" {escape(getattr(option, field))} |" for _, field in extra)
-        lines.append(f"| {rank} | {escape(option.name)} |{extra_cells} {value:,.2f} |{type_cell} {dollars(option.price_usd)} | "
+        lines.append(f"| {rank} | {name_cell(option.name)} |{extra_cells} {value:,.2f} |{type_cell} {dollars(option.price_usd)} | "
                      f"{value / option.price_usd:.4f} | {source_links(sources)} |")
     if not top:
         lines += ["", "No qualifying options recorded."]

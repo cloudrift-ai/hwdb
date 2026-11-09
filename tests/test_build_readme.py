@@ -66,7 +66,14 @@ class RankingTests(unittest.TestCase):
             [option(model="A|B\n<C>", source="Specs: https://example.com/a_(b)\nPrice: https://example.com/p")],
             "gpu", "new", "memory_gb", "VRAM")
         self.assertIn("A&#124;B &lt;C&gt;", text)
-        self.assertIn("[source1](<https://example.com/a_(b)>)", text)
+        self.assertIn("<details><summary>2 sources</summary>[source1](<https://example.com/a_(b)>)<br>"
+                      "[source2](<https://example.com/p>)</details>", text)
+
+    def test_long_names_collapse_at_a_word_boundary(self):
+        self.assertEqual(build_readme.name_cell("Short name"), "Short name")
+        self.assertEqual(build_readme.name_cell("Corsair Vengeance LPX CMK32GX4M2E3200C16"),
+                         "<details><summary>Corsair Vengeance LPX…</summary>"
+                         "Corsair Vengeance LPX CMK32GX4M2E3200C16</details>")
 
     def test_all_requested_sections_are_flattened(self):
         text = build_readme.render_rankings([])
