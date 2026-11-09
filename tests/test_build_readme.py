@@ -220,6 +220,15 @@ class RankingTests(unittest.TestCase):
         self.assertEqual([build_readme.dollars(v) for v in (498.75, 200.5, 179.49, 17499.95)],
                          ["$499", "$201", "$179", "$17,500"])
 
+    def test_bandwidth_tables_show_capacity_where_ranked(self):
+        text = build_readme.render_table([option(), option(model="No size", memory_gb=None)],
+                                         "gpu", "new", "bandwidth_gbs", "Bandwidth")
+        self.assertIn("| Rank | Option | GB | GBps | Price | GBps/$ | Sources |", text)
+        self.assertIn("| Vendor Model | 16 | 256.00 |", text)
+        self.assertIn("| Vendor No size | — | 256.00 |", text)
+        cpu = build_readme.render_table([option(category="cpu")], "cpu", "new", "bandwidth_gbs", "Bandwidth")
+        self.assertIn("| Rank | Option | GBps |", cpu)
+
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

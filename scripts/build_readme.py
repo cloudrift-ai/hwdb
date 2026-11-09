@@ -22,6 +22,7 @@ class Metric:
     field: str
     unit: str
     decimals: int = 2  # displayed precision of the metric value
+    context: tuple[str, ...] = ()  # other metrics shown before the value, when the category has a table for them
     type_field: str | None = None  # Option field naming the data type, shown as a Type column
     source_field: str | None = None  # Option field with metric-specific source URLs
 
@@ -29,7 +30,7 @@ class Metric:
 # Ranked metrics in table order. Each is an Option field, an optional CSV column and an optional workbook column.
 METRICS = (
     Metric("memory_gb", "GB", decimals=0),
-    Metric("bandwidth_gbs", "GBps"),
+    Metric("bandwidth_gbs", "GBps", context=("memory_gb",)),
     Metric("tops", "TOPS", type_field="tops_type", source_field="tops_source"),
 )
 METRIC_TEXT_FIELDS = tuple(field for metric in METRICS for field in (metric.type_field, metric.source_field) if field)
@@ -296,6 +297,10 @@ def source_links(source):
     return collapsible(f"{len(urls)} sources", links)
 
 
+def format_value(value, metric):
+    return "—" if value is None else f"{value:,.{metric.decimals}f}"
+
+
 def render_table(options, category, condition, metric, label):
     top, count = top_ten(options, category, condition, metric)
     spec = next(m for m in METRICS if m.field == metric)
@@ -307,6 +312,9 @@ def render_table(options, category, condition, metric, label):
     extra = CATEGORIES[category].columns
     extra_header = "".join(f" {header} |" for header, _ in extra)
     extra_rule = " --- |" * len(extra)
+    context = [m for m in METRICS if m.field in spec.context and m.field in CATEGORIES[category].tables]
+    extra_header += "".join(f" {m.unit} |" for m in context)
+    extra_rule += " ---: |" * len(context)
     lines += [f"| Rank | Option |{extra_header} {unit} |{type_header} Price | {unit}/$ | Sources |",
               f"| ---: | --- |{extra_rule} ---: |{type_rule} ---: | ---: | --- |"]
     for rank, option in enumerate(top, 1):
@@ -314,7 +322,8 @@ def render_table(options, category, condition, metric, label):
         type_cell = f" {escape(getattr(option, spec.type_field))} |" if spec.type_field else ""
         sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
         extra_cells = "".join(f" {escape(getattr(option, field))} |" for _, field in extra)
-        lines.append(f"| {rank} | {name_cell(option.name)} |{extra_cells} {value:,.{spec.decimals}f} |{type_cell} {dollars(option.price_usd)} | "
+        extra_cells += "".join(f" {format_value(getattr(option, m.field), m)} |" for m in context)
+        lines.append(f"| {rank} | {name_cell(option.name)} |{extra_cells} {format_value(value, spec)} |{type_cell} {dollars(option.price_usd)} | "
                      f"{value / option.price_usd:.4f} | {source_links(sources)} |")
     if not top:
         lines += ["", "No qualifying options recorded."]
