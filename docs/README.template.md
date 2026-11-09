@@ -24,8 +24,8 @@ table lists up to ten in-stock offers recorded in this repository; it is not a s
 - **GPU systems**: complete GPU and AI-accelerator systems, including unified-memory machines. Capacity is
   GPU-accessible memory, counted once.
 - **CPU**: processor-only prices, excluding RAM and board. Bandwidth assumes every memory channel is populated.
-- **DDR memory**: priced DIMMs and kits; no compute table. Bandwidth is transfer rate × channels; a two-DIMM kit
-  counts as two channels.
+- **DDR memory**: priced DIMMs and kits, with module count and memory type; no compute table. Bandwidth is transfer
+  rate × channels; a two-DIMM kit counts as two channels.
 - **CPU systems**: complete servers including installed RAM. Capacity is the installed RAM, not the platform maximum.
   Bandwidth follows the installed DIMMs; a server without enough configuration detail appears only in the capacity
   table.

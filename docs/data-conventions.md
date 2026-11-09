@@ -15,6 +15,7 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
 - `data/options.csv`: supplemental rows. Categories are `gpu`, `gpu_system`, `cpu`, `ddr`, `cpu_system` and
   `embedded`; conditions are `new` and `used`. Record the exact priced configuration, numeric GB and GBps, USD price,
   ISO price date, price basis, availability and source URLs (space-separated). Leave unknown values empty.
+  DDR rows also require `modules` and `memory_type`.
 - The same category, condition, vendor and model may not appear in both the workbook and the CSV.
 - Ranked metrics, category tables and worksheet columns are declared once in `METRICS`, `CATEGORIES` and `SHEETS` in
   [scripts/build_readme.py](../scripts/build_readme.py).
@@ -52,7 +53,9 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
   748 GB combined CPU/GPU capacity. Multi-accelerator figures are aggregates.
 - **CPU**: processor-only price, excluding RAM, board and platform. Peak bandwidth assumes the supported memory
   configuration is fully populated.
-- **DDR**: separately priced DIMMs or kits. Capacity and bandwidth are for the whole kit. Bandwidth is payload
+- **DDR**: separately priced DIMMs or kits. Capacity and bandwidth are for the whole kit. Record the module count in
+  `modules` and the generation, rated speed and RDIMM marking in `memory_type` (for example `DDR4-2400 RDIMM`);
+  keep them out of `model`, which holds the product line and exact SKU. Bandwidth is payload
   bandwidth at the rated transfer rate; ECC bits add none. Two-DIMM kits assume two independent 64-bit channels; a
   DDR5 DIMM's two 32-bit subchannels together give 64 payload bits. XMP/EXPO speeds need a compatible CPU and board.
 - **CPU systems**: complete servers with installed RAM; barebones chassis and CPU/board bundles are excluded.
