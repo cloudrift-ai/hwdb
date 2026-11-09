@@ -18,3 +18,6 @@ Retain unknown shipping as unknown: the public product page's price excludes any
 For bandwidth, distinguish DRAM rating from the board's operating interface. Raspberry Pi's official Pi 5 launch
 article specifies 32-bit LPDDR4X-4267 and Pi 4's effective 2000 MT/s interface. Thus Pi 5/Pi 500 calculate to
 17.068 GB/s and Pi 4 to 8 GB/s theoretical; do not assign Pi 4 12.8 GB/s from its 3200-rated memory label alone.
+
+Tested 2026-11-09: product pages load with plain HTTP. The JSON-LD `offers.availability` field and the main block
+(price, "In stock", "N in stock", "Max per customer") give the selected product's stock without a browser.

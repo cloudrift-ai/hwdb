@@ -61,3 +61,15 @@ RAM; SD/eMMC storage, carrier-only boards and similarly named books are not memo
 Searches can append unrelated results after reporting zero exact matches. Treat those as new leads to validate,
 never as matches to the original query. An eBay Error Page is an access failure, not zero inventory; retry once by
 reloading or using the original linked item URL, then record an unverified outcome if no current offer can be read.
+
+Stock signals tested in the 2026-11-09 refresh: decide availability from the status banner
+(`[data-testid="d-statusmessage"]` or `.ux-message__content`, e.g. "This listing sold on ..." or "ended by the
+seller"), `.x-quantity__availability` and the embedded product data (`InStock`, `UsedCondition`,
+`RefurbishedCondition`). A banner overrides a displayed quantity. Do not text-search the raw page for "has ended",
+"We looked everywhere" or "out of stock": every page carries them in scripts or boilerplate. A redirect from
+`/itm/<id>` to a catalog page `/p/<id>` means the listing ended. Pickup-only listings have an empty
+`.ux-labels-values--shipping` and show "Free local pickup". Item specifics truncate MPNs at 20 characters.
+When several agents share one browser, eBay rate-limits same-origin fetches with 403: pace item loads (roughly one
+per 30-60 seconds under load), retry with backoff, and run long fetch queues in the background on `window` because
+the JavaScript tool times out after 45 seconds. Read seller descriptions for "opened box" and Apple Certified
+Refurbished disclosures; HWDB treats opened-box and refurbished stock as used.

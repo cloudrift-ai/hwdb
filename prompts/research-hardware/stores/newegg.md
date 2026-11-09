@@ -29,3 +29,11 @@ TekBoost, Best IT Hub and AMURAS NY. These are selected asking offers, not endor
 
 Return the shared result with both URLs when category evidence supplies the price. Do not join an old indexed title
 to a newly retrieved card's price or infer stock solely from a visible price.
+
+Tested 2026-11-09: a same-origin fetch of an item page (`?Item=<id>`) includes `window.__initialState__`, whose
+`ItemDetail` carries `FinalPrice`, `ShippingCharge`, `Instock`, `Active`, `AddToCartType` and the seller name.
+Observed `AddToCartType` values: 0 Add to cart, 3 Back Order, 4 Request a quote, 6 deactivated offer (`Active` "0").
+Only 0 is eligible. `ShippingCharge` 0.01 renders as Free. Other sellers of a product come from
+`/product/api/MoreBuyingOptions?ParentItem=<parent>&TabType=<0 all|1 new|2 used>&MappingId=<id>&PageNum=N&PageSize=5`
+(MappingId from `__initialState__`); item price there is `UnitCost - InstantRebateAmount`. Search pages render
+client-side, so read them from an open tab. Raw HTML contains an "out of stock" string even when in stock.
