@@ -34,8 +34,9 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
 
 ## Sources
 
-- Every ranked row needs the live offer URL and at least one specification URL that states its capacity,
-  bandwidth inputs or exact SKU. Prefer vendor product pages, datasheets and QuickSpecs. Use a parts database or
+- Every ranked row needs the live offer URL and at least one specification URL that states its capacity, bandwidth
+  inputs or exact SKU. Research audits live in `data/price_refresh.json`, `data/top_ten_expansion.json` and dated
+  `data/offer_research_*.json` files. Prefer vendor product pages, datasheets and QuickSpecs. Use a parts database or
   marketplace spec listing only for discontinued parts with no vendor page, such as older server RDIMMs.
 - Tested 2026-11-08: AMD per-SKU CPU specs for older parts live under
   `amd.com/en/support/downloads/drivers.html/processors/...`; the former product URLs return 404 and
@@ -82,10 +83,11 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
   unbranded server RDIMMs). Tables show vendor and series, with the SKU in a collapsed part. Bandwidth is payload
   bandwidth at the rated transfer rate; ECC bits add none. Two-DIMM kits assume two independent 64-bit channels; a
   DDR5 DIMM's two 32-bit subchannels together give 64 payload bits. XMP/EXPO speeds need a compatible CPU and board.
-- **CPU systems**: complete servers with installed RAM; barebones chassis and CPU/board bundles are excluded.
-  Capacity is installed RAM. Bandwidth uses verified installed DIMM count and operating rate, capped by CPU/OEM limits,
-  assuming the manufacturer's recommended channel population; record that assumption in notes. If count, rate or
-  population is unknown, leave bandwidth empty. Multi-socket figures are aggregate NUMA bandwidth. Refurbished
+- **CPU systems**: complete servers with installed RAM; barebones chassis and CPU/board bundles are excluded. Capacity
+  is installed RAM. Bandwidth uses verified installed DIMM count and operating rate, capped by CPU/OEM limits, assuming
+  the manufacturer's recommended channel population; record that assumption in notes. Use the vendor's
+  speed-by-DIMMs-per-channel table: the Dell R740 technical guide runs 8GB 1R PC4-2933 RDIMMs at 2666 MT/s. If count,
+  rate or population is unknown, leave bandwidth empty. Multi-socket figures are aggregate NUMA bandwidth. Refurbished
   servers are `used`; disclose absent drives.
 - **Embedded**: SoMs, developer kits and boards with included RAM. Bare mobile SoCs without a priced memory
   configuration are excluded. Identify module/carrier bundles and complete kits in notes.

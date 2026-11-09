@@ -36,6 +36,15 @@ shipping, delivered total when known, seller feedback and defects in evidence/no
 with a shipping-inclusive total without an explicit request. New, open-box, refurbished and used are distinct listing
 conditions; retain the exact grade even where HWDB groups refurbished offers under used.
 
+Faster routes tested 2026-11-09 for servers: from an open ebay.com browser tab, a same-origin `fetch()` returns full
+search HTML (parse `li.s-card, li.s-item`; `_ipg=240` gives up to 240 results) and item pages with readable
+`.x-price-primary`, `.x-quantity__availability` and `.ux-labels-values--shipping`. Seller descriptions, where DIMM
+part numbers and layouts usually appear, load with plain HTTP from `https://itm.ebaydesc.com/itmdesc/<itemId>`.
+Use the one-unit price when bulk tiers are shown. Ignore eBay's generated image alt text and miscategorized item
+specifics (a DDR3 server was labelled DDR4; another was typed as a Catalyst switch); rely on title, specifics that
+agree with the description, and the description. Skip configurable multi-variation server listings whose price
+range covers unselected variants.
+
 For model estimates, compare multiple exact matches from distinct sellers and report the observed sample size,
 lowest verified offer and sample median when at least three sellers qualify. A single offer establishes an asking
 price, not a representative market price. Recheck the selected listing before updating source tables.
