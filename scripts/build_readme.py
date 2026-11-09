@@ -280,8 +280,19 @@ def dollars(value):
 NAME_WIDTH = 27  # longer option names collapse so each table row stays about one line on GitHub
 
 
+def small(text):
+    """GitHub strips font-size styles but keeps <sub>, which renders smaller text."""
+    return f"<sub>{text}</sub>" if text else text
+
+
 def collapsible(summary, body):
-    return f"<details><summary>{summary}</summary>{body}</details>"
+    return f"<details><summary>{small(summary)}</summary>{small(body)}</details>"
+
+
+def table_row(cells):
+    """Render one Markdown row with every plain cell shrunk; collapsible cells shrink their own parts."""
+    return "|" + "|".join(f" {cell} " if cell.startswith("<details>") else f" {small(cell)} " if cell else " "
+                          for cell in cells) + "|"
 
 
 def name_cell(name):
@@ -312,23 +323,24 @@ def render_table(options, category, condition, metric, label):
     lines = [f"### {label} per $", ""]
     if count < 10:
         lines += [f"Coverage: {count} qualifying option{'s' if count != 1 else ''} after availability filtering; fewer than ten recorded.", ""]
-    type_header, type_rule = (" Type |", " --- |") if spec.type_field else ("", "")
     extra = CATEGORIES[category].columns
-    extra_header = "".join(f" {header} |" for header, _ in extra)
-    extra_rule = " --- |" * len(extra)
     context = [m for m in METRICS if m.field in spec.context and m.field in CATEGORIES[category].tables]
-    extra_header += "".join(f" {m.unit} |" for m in context)
-    extra_rule += " ---: |" * len(context)
-    lines += [f"| | Option |{extra_header} {unit} |{type_header} Price | {unit}/$ | Sources |",
-              f"| ---: | --- |{extra_rule} ---: |{type_rule} ---: | ---: | --- |"]
+    headers = (["", "Option"] + [header for header, _ in extra] + [m.unit for m in context] + [unit]
+               + (["Type"] if spec.type_field else []) + ["Price", f"{unit}/$", "Sources"])
+    rules = (["---:", "---"] + ["---"] * len(extra) + ["---:"] * len(context) + ["---:"]
+             + (["---"] if spec.type_field else []) + ["---:", "---:", "---"])
+    lines += [table_row(headers), "| " + " | ".join(rules) + " |"]
     for rank, option in enumerate(top, 1):
         value = getattr(option, metric)
-        type_cell = f" {escape(getattr(option, spec.type_field))} |" if spec.type_field else ""
         sources = " ".join(filter(None, [option.source, getattr(option, spec.source_field, "") if spec.source_field else ""]))
-        extra_cells = "".join(f" {escape(getattr(option, field))} |" for _, field in extra)
-        extra_cells += "".join(f" {format_value(getattr(option, m.field), m)} |" for m in context)
-        lines.append(f"| {rank} | {name_cell(option.name)} |{extra_cells} {format_value(value, spec)} |{type_cell} {dollars(option.price_usd)} | "
-                     f"{value / option.price_usd:.4f} | {source_links(sources)} |")
+        lines.append(table_row(
+            [str(rank), name_cell(option.name)]
+            + [escape(getattr(option, field)) for _, field in extra]
+            + [format_value(getattr(option, m.field), m) for m in context]
+            + [format_value(value, spec)]
+            + ([escape(getattr(option, spec.type_field))] if spec.type_field else [])
+            + [dollars(option.price_usd), f"{value / option.price_usd:.4f}", source_links(sources)]
+        ))
     if not top:
         lines += ["", "No qualifying options recorded."]
     return "\n".join(lines)

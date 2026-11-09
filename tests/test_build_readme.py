@@ -16,6 +16,19 @@ sys.modules[SPEC.name] = build_readme
 SPEC.loader.exec_module(build_readme)
 
 
+def plain(text):
+    """Drop the <sub> wrappers that shrink table text, so assertions read like plain Markdown."""
+    return text.replace("<sub>", "").replace("</sub>", "")
+
+
+def plain_render_table(*args):
+    return plain(build_readme.render_table(*args))
+
+
+def plain_name_cell(name):
+    return plain(build_readme.name_cell(name))
+
+
 def option(**changes):
     return replace(build_readme.Option(
         "gpu", "new", "Vendor", "Model", 16, 256, 100,
@@ -62,7 +75,7 @@ class RankingTests(unittest.TestCase):
         build_readme.validate_unique([option(), option(condition="used")])
 
     def test_markdown_escaping_and_source_urls(self):
-        text = build_readme.render_table(
+        text = plain_render_table(
             [option(model="A|B\n<C>", source="Specs: https://example.com/a_(b)\nPrice: https://example.com/p")],
             "gpu", "new", "memory_gb", "VRAM")
         self.assertIn("A&#124;B &lt;C&gt;", text)
@@ -71,10 +84,10 @@ class RankingTests(unittest.TestCase):
 
     def test_long_names_collapse_at_a_word_boundary(self):
         self.assertIn("<summary>Supermicro SYS-6019U-TN4R4…</summary>",
-                      build_readme.name_cell("Supermicro SYS-6019U-TN4R4T 2x Gold 5118 256GB (8x32GB)"))
-        self.assertEqual(build_readme.name_cell("Short name"), "Short name")
-        self.assertEqual(build_readme.name_cell("Crucial Pro CP2K16G4DFRA32A"), "Crucial Pro CP2K16G4DFRA32A")
-        self.assertEqual(build_readme.name_cell("Corsair Vengeance LPX CMK32GX4M2E3200C16"),
+                      plain_name_cell("Supermicro SYS-6019U-TN4R4T 2x Gold 5118 256GB (8x32GB)"))
+        self.assertEqual(plain_name_cell("Short name"), "Short name")
+        self.assertEqual(plain_name_cell("Crucial Pro CP2K16G4DFRA32A"), "Crucial Pro CP2K16G4DFRA32A")
+        self.assertEqual(plain_name_cell("Corsair Vengeance LPX CMK32GX4M2E3200C16"),
                          "<details><summary>Corsair Vengeance LPX…</summary>"
                          "Corsair Vengeance LPX CMK32GX4M2E3200C16</details>")
 
@@ -191,27 +204,27 @@ class RankingTests(unittest.TestCase):
         metrics = build_readme.METRICS + (build_readme.Metric("price_usd", "USD"),)
         categories = {"gpu": build_readme.Category("GPU", {"price_usd": "Cost", "memory_gb": "VRAM"})}
         with patch.object(build_readme, "METRICS", metrics), patch.object(build_readme, "CATEGORIES", categories):
-            text = build_readme.render_rankings([option()])
+            text = plain(build_readme.render_rankings([option()]))
         headings = [line for line in text.splitlines() if line.startswith("### ")]
         self.assertEqual(headings, ["### VRAM per $", "### Cost per $"] * 2)
         self.assertIn("| | Option | USD | Price | USD/$ |", text)
 
     def test_tops_table_shows_type_and_requires_it(self):
         row = option(tops=100, tops_type="NVFP4", tops_source="https://example.com/spec")
-        text = build_readme.render_table([row], "gpu", "new", "tops", "TOPS")
+        text = plain_render_table([row], "gpu", "new", "tops", "TOPS")
         self.assertIn("| | Option | GB | TOPS | Type | Price | TOPS/$ | Sources |", text)
         self.assertIn("| 16 | 100.00 | NVFP4 | $100 | 1.0000 |", text)
         self.assertIn("(<https://example.com/spec>)", text)
-        self.assertNotIn("Type", build_readme.render_table([row], "gpu", "new", "memory_gb", "VRAM"))
+        self.assertNotIn("Type", plain_render_table([row], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "must be set together"):
             build_readme.render_rankings([option(tops=100)])
 
     def test_ddr_tables_show_modules_and_type(self):
         kit = option(category="ddr", model="Kit", modules="2", memory_type="DDR4-3200")
-        text = build_readme.render_table([kit], "ddr", "new", "memory_gb", "RAM")
+        text = plain_render_table([kit], "ddr", "new", "memory_gb", "RAM")
         self.assertIn("| | Option | # | Type | GB | Price | GB/$ | Sources |", text)
         self.assertIn("| Vendor Kit | 2 | DDR4-3200 | 16 |", text)
-        self.assertNotIn("| # |", build_readme.render_table([option()], "gpu", "new", "memory_gb", "VRAM"))
+        self.assertNotIn("| # |", plain_render_table([option()], "gpu", "new", "memory_gb", "VRAM"))
         with self.assertRaisesRegex(ValueError, "missing memory_type"):
             build_readme.render_rankings([option(category="ddr", modules="2")])
 
@@ -220,13 +233,20 @@ class RankingTests(unittest.TestCase):
                          ["$499", "$201", "$179", "$17,500"])
 
     def test_bandwidth_tables_show_capacity_where_ranked(self):
-        text = build_readme.render_table([option(), option(model="No size", memory_gb=None)],
+        text = plain_render_table([option(), option(model="No size", memory_gb=None)],
                                          "gpu", "new", "bandwidth_gbs", "Bandwidth")
         self.assertIn("| | Option | GB | GBps | Price | GBps/$ | Sources |", text)
         self.assertIn("| Vendor Model | 16 | 256.00 |", text)
         self.assertIn("| Vendor No size | — | 256.00 |", text)
-        cpu = build_readme.render_table([option(category="cpu")], "cpu", "new", "bandwidth_gbs", "Bandwidth")
+        cpu = plain_render_table([option(category="cpu")], "cpu", "new", "bandwidth_gbs", "Bandwidth")
         self.assertIn("| | Option | GBps |", cpu)
+
+    def test_table_cells_use_small_text(self):
+        text = build_readme.render_table([option(source="https://a.example https://b.example")],
+                                         "gpu", "new", "memory_gb", "VRAM")
+        self.assertIn("| | <sub>Option</sub> | <sub>GB</sub> |", text)
+        self.assertIn("| <sub>1</sub> | <sub>Vendor Model</sub> | <sub>16</sub> | <sub>$100</sub> |", text)
+        self.assertIn("<details><summary><sub>2 sources</sub></summary><sub>[source1]", text)
 
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:
