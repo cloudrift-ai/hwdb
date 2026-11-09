@@ -313,5 +313,93 @@
     "open_questions": {
       "Milk-V Jupiter NX": "milkv.io lists 2.0 TOPS without a data type, so TOPS stays empty. Banana Pi's SpacemiT K1 datasheet gives 32-bit LPDDR4X-2666 (about 10.7 GBps), which conflicts with the recorded 34.1 GBps; recheck."
     }
+  },
+  "cpu_system_new": {
+    "accepted": [
+      {
+        "vendor": "Lenovo",
+        "model": "ST250 V3 Xeon 6315P",
+        "memory_gb": 16,
+        "price_usd": 1799.99,
+        "source": "https://www.ebay.com/itm/298398185796 https://lenovopress.lenovo.com/lp1803 https://www.intel.com/content/www/us/en/products/sku/241603/intel-xeon-6315p-processor-12m-cache-2-80-ghz/specifications.html"
+      },
+      {
+        "vendor": "Lenovo",
+        "model": "ST650 V3 Xeon 4514Y",
+        "memory_gb": 32,
+        "price_usd": 3399.99,
+        "source": "https://www.ebay.com/itm/306991393350 https://lenovopress.lenovo.com/lp1604 https://www.intel.com/content/www/us/en/products/sku/237557/intel-xeon-silver-4514y-processor-30m-cache-2-00-ghz/specifications.html"
+      },
+      {
+        "vendor": "Lenovo",
+        "model": "SR630 V4 Xeon 6505P",
+        "memory_gb": 256,
+        "price_usd": 22503.0,
+        "source": "https://www.ebay.com/itm/227559780716 https://lenovopress.lenovo.com/lp1971 https://www.intel.com/content/www/us/en/products/sku/242667/intel-xeon-6505p-processor-48m-cache-2-20-ghz/specifications.html"
+      },
+      {
+        "vendor": "Dell",
+        "model": "R360 Xeon 6315P",
+        "memory_gb": 32,
+        "price_usd": 5037.0,
+        "source": "https://www.ebay.com/itm/900042205386 https://www.delltechnologies.com/asset/en-us/products/servers/technical-support/poweredge-r360-technical-guide.pdf https://www.intel.com/content/www/us/en/products/sku/241603/intel-xeon-6315p-processor-12m-cache-2-80-ghz/specifications.html"
+      },
+      {
+        "vendor": "Dell",
+        "model": "R360 Xeon 6325P",
+        "memory_gb": 32,
+        "price_usd": 6373.0,
+        "source": "https://www.ebay.com/itm/900042205347 https://www.delltechnologies.com/asset/en-us/products/servers/technical-support/poweredge-r360-technical-guide.pdf https://www.intel.com/content/www/us/en/products/sku/241605/intel-xeon-6325p-processor-12m-cache-3-50-ghz/specifications.html"
+      },
+      {
+        "vendor": "Dell",
+        "model": "T160 Xeon 6325P",
+        "memory_gb": 32,
+        "price_usd": 4030.0,
+        "source": "https://www.ebay.com/itm/900042205387 https://www.delltechnologies.com/asset/en-us/products/servers/technical-support/poweredge-t160-technical-guide.pdf https://www.intel.com/content/www/us/en/products/sku/241605/intel-xeon-6325p-processor-12m-cache-3-50-ghz/specifications.html"
+      }
+    ],
+    "rejected": [
+      {
+        "candidate": "Dell R360 Xeon 6315P/6333P/6353P 16-64GB (InterBolt.eu)",
+        "url": "https://www.ebay.com/itm/307272951266",
+        "reason": "Hungary seller; packaging 'New Retail, Open Box for inspection purposes' (opened box = used) and 'chassis will be configured after your purchase'; USD 2,000 shipping. Same for 900075631063, 307272951285, 900075650964, 900075603922."
+      },
+      {
+        "candidate": "Dell R360 Pentium G7400 4x32GB 128GB (networksultra)",
+        "url": "https://www.ebay.com/itm/188486984535",
+        "reason": "Configuration only in title; seller description is a generic industrial-automation template with no server details; item specifics say Tower form factor for a 1U rack server; 88-feedback seller and item location not shown. Later re-read hit eBay 403."
+      },
+      {
+        "candidate": "Dell T160 Xeon 6315P 32GB (dw_store13, Korea)",
+        "url": "https://www.ebay.com/itm/358532257267",
+        "reason": "Installed DIMM count not stated, so bandwidth cannot be computed; item specifics say DDR4 for a DDR5 server; bundled Windows 11 Pro. Sibling 358546874935 has title 16G vs item specific RAM Size 32 GB (contradiction)."
+      },
+      {
+        "candidate": "Lenovo ST650 V3 Xeon Silver 4410Y 32GB (redtagdeal)",
+        "url": "https://www.ebay.com/itm/128049370717",
+        "reason": "Contradiction: title and description say 7D7A1007NA / Silver 4410Y, item specifics say MPN 7D7A100MNA / Silver 4514Y; description also mentions 4514Y."
+      },
+      {
+        "candidate": "Lenovo SR630 V2 2x Gold 6354 4x32GB and 2x Silver 4310 4x32GB (MFP Technology Services)",
+        "url": "https://www.ebay.com/itm/327268443201",
+        "reason": "Seller description says NEW OPEN BOX (HWDB used), not new. Same for 327268532108."
+      },
+      {
+        "candidate": "Dell T360 Smart Selection 6333P (F81V0)",
+        "url": "https://www.ebay.com/itm/366762451757",
+        "reason": "Installed RAM not stated in title or description; item page returned eBay 403 (also 900042916720)."
+      },
+      {
+        "candidate": "Dell R360 / T160 / R260 / T360 on Newegg",
+        "url": "https://www.newegg.com/p/N82E16859995095",
+        "reason": "Request-a-Quote / OUT OF STOCK pages without a price (also N82E16859155900, N82E16859995047, N82E16859995030, N82E16859995081)."
+      },
+      {
+        "candidate": "Dell R360 GNYR5 (ErsaZZa, Germany)",
+        "url": "https://www.ebay.com/itm/147624701439",
+        "reason": "EUR-priced (EUR 6,955); same configuration cheaper from digi-techx in USD."
+      }
+    ]
   }
 }
