@@ -6,7 +6,7 @@ Read `README.md` and the current source rows before editing. For price research,
 
 1. For existing workbook hardware, record price-only refreshes in `data/workbook_overrides.csv`; nonempty
    `price_usd`, `price_date`, `price_basis`, `availability` and `source` supersede workbook values, and `notes` append
-   listing details. Retain its category, condition and memory fields. Update the workbook itself when requested,
+   listing details. Retain its category, condition and metric fields. Update the workbook itself when requested,
    or add supplemental hardware rows to `data/options.csv`.
    Do not duplicate an existing `(category, condition, vendor, model)` across the workbook and CSV.
    Distinct priced configurations need distinct, explicit model names. An expired offer may be replaced by a
@@ -15,7 +15,7 @@ Read `README.md` and the current source rows before editing. For price research,
    in `source`, separated by spaces, and explain calculations and excluded components in `notes`.
    A page retrieval date is not a new price date when the only evidence is an older indexed snapshot.
 3. Register eligible workbook `Platform` rows in `data/workbook_overrides.csv` with the correct category, condition
-   and capacity. Use installed RAM for CPU systems and GPU-accessible memory for GPU systems.
+   and metrics. Use installed RAM for CPU systems and GPU-accessible memory for GPU systems.
    Preserve unrelated worksheets, workbook formatting and files in `outputs/`.
 4. Change introduction or methodology prose in `docs/README.template.md`. Keep its single `{{RANKINGS}}` marker.
    Keep one global README generation timestamp and the flat New/Used category sections with at most ten rows per

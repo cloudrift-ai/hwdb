@@ -117,7 +117,7 @@ class RankingTests(unittest.TestCase):
             (temporary / "hardware_database.xlsx").symlink_to(root / "hardware_database.xlsx")
             with (temporary / "data/workbook_overrides.csv").open("w", newline="") as stream:
                 writer = csv.DictWriter(stream, fieldnames=[
-                    "sheet", "model", "category", "condition", "memory_gb", "price_usd", "price_date",
+                    "sheet", "model", "category", "condition", "memory_gb", "bandwidth_gbs", "price_usd", "price_date",
                     "price_basis", "availability", "source", "notes",
                 ])
                 writer.writeheader()
@@ -140,6 +140,52 @@ class RankingTests(unittest.TestCase):
             self.assertIn("Needs forced airflow", refreshed.notes)
             self.assertIn("Shipping extra.", refreshed.notes)
             self.assertEqual(by_model["EPYC 7742"], baseline["EPYC 7742"])
+
+    def write_overrides(self, directory, rows):
+        root = SCRIPT.parents[1]
+        temporary = Path(directory)
+        (temporary / "data").mkdir()
+        (temporary / "hardware_database.xlsx").symlink_to(root / "hardware_database.xlsx")
+        with (temporary / "data/workbook_overrides.csv").open("w", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=[
+                "sheet", "model", "category", "condition", "memory_gb", "bandwidth_gbs", "price_usd",
+                "price_date", "price_basis", "availability", "source", "notes",
+            ], restval="")
+            writer.writeheader()
+            writer.writerows(rows)
+        return temporary / "hardware_database.xlsx"
+
+    def test_override_corrects_bandwidth_and_registers_accelerators(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.write_overrides(directory, [
+                {"sheet": "GPU", "model": "Tesla M40 24GB", "category": "gpu", "condition": "used",
+                 "bandwidth_gbs": "300"},
+                {"sheet": "Accelerator", "model": "Blackhole p150a", "category": "gpu", "condition": "new"},
+            ])
+            by_model = {o.model: o for o in build_readme.workbook_options(path)}
+        self.assertEqual(by_model["Tesla M40 24GB"].bandwidth_gbs, 300)
+        self.assertEqual(by_model["Tesla M40 24GB"].memory_gb, 24)
+        self.assertEqual((by_model["Blackhole p150a"].memory_gb, by_model["Blackhole p150a"].bandwidth_gbs), (32, 512))
+        self.assertNotIn("Wormhole n300d", by_model)
+
+    def test_unmatched_or_invalid_overrides_fail(self):
+        for row, message in (
+            ({"sheet": "GPU", "model": "No Such GPU", "category": "gpu", "condition": "new"}, "match no workbook row"),
+            ({"sheet": "Nope", "model": "X", "category": "gpu", "condition": "new"}, "Unknown sheet"),
+            ({"sheet": "GPU", "model": "Tesla M40 24GB", "category": "tpu", "condition": "new"}, "Unknown category"),
+        ):
+            with self.subTest(message=message), tempfile.TemporaryDirectory() as directory:
+                with self.assertRaisesRegex(ValueError, message):
+                    build_readme.workbook_options(self.write_overrides(directory, [row]))
+
+    def test_tables_follow_metric_and_category_registries(self):
+        metrics = build_readme.METRICS + (build_readme.Metric("price_usd", "USD"),)
+        categories = {"gpu": build_readme.Category("GPU", {"price_usd": "Cost", "memory_gb": "VRAM"})}
+        with patch.object(build_readme, "METRICS", metrics), patch.object(build_readme, "CATEGORIES", categories):
+            text = build_readme.render_rankings([option()])
+        headings = [line for line in text.splitlines() if line.startswith("### ")]
+        self.assertEqual(headings, ["### VRAM per $", "### Cost per $"] * 2)
+        self.assertIn("| Rank | Option | USD | Price (USD) | USD/$ |", text)
 
     def test_check_detects_stale_readme_without_overwriting_it(self):
         with tempfile.TemporaryDirectory() as directory:

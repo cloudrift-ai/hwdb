@@ -13,13 +13,59 @@ import sys
 from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[1]
+CONDITIONS = ("new", "used")
+
+
+@dataclass(frozen=True)
+class Metric:
+    field: str
+    unit: str
+
+
+# Ranked metrics in table order. Each is an Option field, an optional CSV column and an optional workbook column.
+METRICS = (
+    Metric("memory_gb", "GB"),
+    Metric("bandwidth_gbs", "GB/s"),
+)
+
+
+@dataclass(frozen=True)
+class Category:
+    title: str
+    tables: dict[str, str]  # metric field -> table label; a missing metric gets no table
+
+
 CATEGORIES = {
-    "gpu": ("GPU", "VRAM", ("new", "used")),
-    "cpu": ("CPU", None, ("new", "used")),
-    "gpu_system": ("GPU system", "VRAM", ("new", "used")),
-    "ddr": ("DDR memory", "RAM", ("new", "used")),
-    "cpu_system": ("CPU systems", "RAM", ("new", "used")),
-    "embedded": ("Embedded systems", "RAM", ("new", "used")),
+    "gpu": Category("GPU", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth"}),
+    "cpu": Category("CPU", {"bandwidth_gbs": "Bandwidth"}),
+    "gpu_system": Category("GPU system", {"memory_gb": "VRAM", "bandwidth_gbs": "Bandwidth"}),
+    "ddr": Category("DDR memory", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"}),
+    "cpu_system": Category("CPU systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"}),
+    "embedded": Category("Embedded systems", {"memory_gb": "RAM", "bandwidth_gbs": "Bandwidth"}),
+}
+
+
+@dataclass(frozen=True)
+class Sheet:
+    category: str | None  # None: rank only rows registered in workbook_overrides.csv
+    model_column: str
+    metric_columns: dict[str, str]
+
+
+SHEETS = {
+    "GPU": Sheet("gpu", "Model", {"memory_gb": "Memory (GB)", "bandwidth_gbs": "Peak bandwidth (GB/s)"}),
+    "CPU": Sheet("cpu", "Model", {"memory_gb": "Max memory (GB)", "bandwidth_gbs": "Peak bandwidth (GB/s)"}),
+    "SoM": Sheet("embedded", "Module",
+                 {"memory_gb": "Max memory (GB)", "bandwidth_gbs": "Peak bandwidth (GB/s)"}),
+    "Platform": Sheet(None, "System", {"memory_gb": "Total memory (GB)",
+                                       "bandwidth_gbs": "Peak / aggregate bandwidth (GB/s)"}),
+    "Accelerator": Sheet(None, "Model", {"memory_gb": "Memory (GB)", "bandwidth_gbs": "Peak bandwidth (GB/s)"}),
+}
+
+# Override fields that replace a workbook price observation when nonempty.
+PRICE_OVERRIDES = {
+    "price_usd": "Price (USD)", "price_date": "Price date", "price_basis": "Price basis",
+    "availability": "Availability", "source": "Source",
 }
 
 
@@ -75,64 +121,70 @@ def worksheet_records(sheet):
             yield record
 
 
-def workbook_options(path):
-    with (path.parent / "data/workbook_overrides.csv").open(newline="", encoding="utf-8") as stream:
-        overrides = {}
-        for row in csv.DictReader(stream):
+def validate_class(category, condition):
+    if category not in CATEGORIES:
+        raise ValueError(f"Unknown category {category!r}")
+    if condition not in CONDITIONS:
+        raise ValueError(f"Unknown condition {condition!r}")
+
+
+def read_overrides(path):
+    overrides = {}
+    with path.open(newline="", encoding="utf-8") as stream:
+        for line, row in enumerate(csv.DictReader(stream), 2):
             key = (row["sheet"], row["model"])
-            if key in overrides:
-                raise ValueError(f"Duplicate workbook override: {key}")
-            if row["category"] not in CATEGORIES or row["condition"] not in ("new", "used"):
-                raise ValueError(f"Invalid category or condition in workbook override: {key}")
+            try:
+                if key in overrides:
+                    raise ValueError(f"Duplicate workbook override {key}")
+                if row["sheet"] not in SHEETS:
+                    raise ValueError(f"Unknown sheet {row['sheet']!r}")
+                validate_class(row["category"], row["condition"])
+            except ValueError as error:
+                raise ValueError(f"{path}:{line}: {error}") from error
             overrides[key] = row
+    return overrides
+
+
+def workbook_options(path):
+    overrides = read_overrides(path.parent / "data/workbook_overrides.csv")
     workbook = load_workbook(path, data_only=True, read_only=True)
-    options = []
+    options, matched = [], set()
     try:
-        for sheet_name in ("GPU", "CPU", "SoM", "Platform"):
+        for sheet_name, sheet in SHEETS.items():
             for row in worksheet_records(workbook[sheet_name]):
-                category, model_field, memory_field = {
-                    "GPU": ("gpu", "Model", "Memory (GB)"),
-                    "CPU": ("cpu", "Model", "Max memory (GB)"),
-                    "SoM": ("embedded", "Module", "Max memory (GB)"),
-                    "Platform": ("gpu_system", "System", "Total memory (GB)"),
-                }[sheet_name]
-                model = row[model_field]
+                model = row[sheet.model_column]
                 override = overrides.get((sheet_name, model))
-                if override:
-                    # Refresh price observations without rewriting the baseline workbook.
-                    for field, column in {
-                        "price_usd": "Price (USD)", "price_date": "Price date",
-                        "price_basis": "Price basis", "availability": "Availability",
-                        "source": "Source",
-                    }.items():
-                        if override.get(field):
-                            row[column] = override[field]
-                    if override.get("notes"):
-                        row["Notes"] = " ".join(filter(None, [row.get("Notes"), override["notes"]]))
-                bandwidth_field = "Peak bandwidth (GB/s)"
-                if sheet_name == "Platform":
-                    bandwidth_field = "Peak / aggregate bandwidth (GB/s)"
-                    if override is None:
-                        continue  # Only explicitly categorized platforms are ranked.
+                if override is None and sheet.category is None:
+                    continue  # Only explicitly categorized rows from this sheet are ranked.
+                metrics = {field: row.get(column) for field, column in sheet.metric_columns.items()}
                 # Condition describes this price, not the product's availability.
                 basis = str(row.get("Price basis") or "")
+                category = sheet.category
                 condition = "used" if re.search(r"\bused\b|refurb", basis, re.I) else "new"
-                memory = row.get(memory_field)
                 notes = str(row.get("Notes") or "")
                 if override:
-                    category = override["category"]
-                    condition = override["condition"]
-                    if override["memory_gb"]:
-                        memory = override["memory_gb"]
+                    matched.add((sheet_name, model))
+                    category, condition = override["category"], override["condition"]
+                    # Refresh price observations and correct metrics without rewriting the baseline workbook.
+                    for field, column in PRICE_OVERRIDES.items():
+                        if override.get(field):
+                            row[column] = override[field]
+                    basis = str(row.get("Price basis") or "")
+                    for metric in METRICS:
+                        if override.get(metric.field):
+                            metrics[metric.field] = override[metric.field]
+                    notes = " ".join(filter(None, [notes, override.get("notes")]))
                 options.append(Option(
-                    category, condition, str(row["Vendor"]), str(model),
-                    number(memory), number(row.get(bandwidth_field)),
-                    number(row.get("Price (USD)")), date_text(row.get("Price date")),
-                    basis, str(row.get("Availability") or ""),
-                    str(row.get("Source") or ""), notes,
+                    category=category, condition=condition, vendor=str(row["Vendor"]), model=str(model),
+                    price_usd=number(row.get("Price (USD)")), price_date=date_text(row.get("Price date")),
+                    price_basis=basis, availability=str(row.get("Availability") or ""),
+                    source=str(row.get("Source") or ""), notes=notes,
+                    **{metric.field: number(metrics.get(metric.field)) for metric in METRICS},
                 ))
     finally:
         workbook.close()
+    if unmatched := sorted(set(overrides) - matched):
+        raise ValueError(f"Workbook overrides match no workbook row: {unmatched}")
     return options
 
 
@@ -141,18 +193,16 @@ def csv_options(path):
         result = []
         for line, row in enumerate(csv.DictReader(stream), 2):
             try:
-                if row["category"] not in CATEGORIES:
-                    raise ValueError(f"Unknown category {row['category']!r}")
-                if row["condition"] not in ("new", "used"):
-                    raise ValueError(f"Unknown condition {row['condition']!r}")
+                validate_class(row["category"], row["condition"])
                 for field in ("vendor", "model", "price_basis", "source"):
                     if not row[field].strip():
                         raise ValueError(f"Missing {field}")
                 result.append(Option(
-                    row["category"], row["condition"], row["vendor"], row["model"],
-                    number(row["memory_gb"]), number(row["bandwidth_gbs"]),
-                    number(row["price_usd"]), date_text(row["price_date"]),
-                    row["price_basis"], row["availability"], row["source"], row["notes"],
+                    category=row["category"], condition=row["condition"], vendor=row["vendor"],
+                    model=row["model"], price_usd=number(row["price_usd"]),
+                    price_date=date_text(row["price_date"]), price_basis=row["price_basis"],
+                    availability=row["availability"], source=row["source"], notes=row["notes"],
+                    **{metric.field: number(row.get(metric.field)) for metric in METRICS},
                 ))
             except (ValueError, KeyError) as error:
                 raise ValueError(f"{path}:{line}: {error}") from error
@@ -195,7 +245,7 @@ def source_links(source):
 
 def render_table(options, category, condition, metric, label):
     top, count = top_ten(options, category, condition, metric)
-    unit = "GB" if metric == "memory_gb" else "GB/s"
+    unit = next(m.unit for m in METRICS if m.field == metric)
     lines = [f"### {label} per $", ""]
     if count < 10:
         lines += [f"Coverage: {count} qualifying option{'s' if count != 1 else ''} after availability filtering; fewer than ten recorded.", ""]
@@ -217,12 +267,11 @@ def render_rankings(options, updated_at=None):
         updated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     lines = ["<!-- Generated by scripts/build_readme.py. Edit source data, not these tables. -->",
              "", f"Last updated: {updated_at}"]
-    for category, (title, capacity_label, conditions) in CATEGORIES.items():
-        for condition in conditions:
-            lines += ["", f"## {title} {condition.title()}", ""]
-            if capacity_label:
-                lines += [render_table(options, category, condition, "memory_gb", capacity_label), ""]
-            lines += [render_table(options, category, condition, "bandwidth_gbs", "Bandwidth")]
+    for key, category in CATEGORIES.items():
+        for condition in CONDITIONS:
+            tables = [render_table(options, key, condition, metric.field, category.tables[metric.field])
+                      for metric in METRICS if metric.field in category.tables]
+            lines += ["", f"## {category.title} {condition.title()}", "", "\n\n".join(tables)]
     return "\n".join(lines)
 
 

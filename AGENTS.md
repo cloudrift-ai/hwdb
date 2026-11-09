@@ -12,7 +12,7 @@ Distinguish advertised specifications, theoretical calculations and measured per
 
 - `hardware_database.xlsx` and `data/options.csv` are hardware inputs. Preserve unrelated workbook changes.
   Files under `outputs/` are historical artifacts, not the active database.
-- `data/workbook_overrides.csv` classifies selected workbook platforms and corrects explicit memory/condition fields.
+- `data/workbook_overrides.csv` classifies selected workbook platforms and corrects explicit metric/condition fields.
   It also owns current price observations for existing workbook rows; nonempty price fields supersede workbook values.
   Use it for price-only refreshes that should preserve the baseline workbook and unrelated user changes.
 - `docs/README.template.md` owns README prose. Generate `README.md` with `make readme`; do not edit its tables by hand.
