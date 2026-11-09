@@ -184,5 +184,134 @@
     "tops_not_published": {
       "Mac Studio M3 Ultra": "Apple states a 32-core Neural Engine without a TOPS figure"
     }
+  },
+  "embedded_new": {
+    "accepted": [
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Thor",
+        "memory_gb": 128,
+        "price_usd": 5099.99,
+        "source": "https://www.ebay.com/itm/117457750654 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-thor/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Orin",
+        "memory_gb": 32,
+        "price_usd": 2499.0,
+        "source": "https://www.ebay.com/itm/128143104209 https://developer.nvidia.com/blog/supercharge-ai-powered-robotics-prototyping-and-edge-ai-applications-with-the-jetson-agx-orin-developer-kit/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Xavier devkit",
+        "memory_gb": 32,
+        "price_usd": 999.0,
+        "source": "https://www.ebay.com/itm/235782129340 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-agx-xavier/ https://developer.nvidia.com/blog/nvidia-jetson-agx-xavier-32-teraops-ai-robotics/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Xavier",
+        "memory_gb": 64,
+        "price_usd": 699.99,
+        "source": "https://www.ebay.com/itm/128021658521 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-agx-xavier/ https://developer.nvidia.com/blog/nvidia-jetson-agx-xavier-32-teraops-ai-robotics/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "AGX Xavier",
+        "memory_gb": 16,
+        "price_usd": 175.0,
+        "source": "https://www.ebay.com/itm/205957999119 https://developer.nvidia.com/blog/nvidia-jetson-agx-xavier-32-teraops-ai-robotics/"
+      },
+      {
+        "vendor": "NVIDIA",
+        "model": "Orin Nano",
+        "memory_gb": 8,
+        "price_usd": 379.0,
+        "source": "https://www.ebay.com/itm/960159934016 https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "5",
+        "memory_gb": 2,
+        "price_usd": 77.5,
+        "source": "https://www.canakit.com/raspberry-pi-5-2gb.html https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "4B",
+        "memory_gb": 2,
+        "price_usd": 67.5,
+        "source": "https://www.pishop.us/product/raspberry-pi-4-model-b-2gb/ https://www.raspberrypi.com/news/introducing-raspberry-pi-5/ https://www.raspberrypi.com/documentation/computers/processors.html"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "CM5 Lite",
+        "memory_gb": 8,
+        "price_usd": 165.0,
+        "source": "https://www.pishop.us/product/raspberry-pi-compute-module-5-8gb-ram-lite-cm5008000/ https://www.raspberrypi.com/products/compute-module-5/ https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+      },
+      {
+        "vendor": "Raspberry Pi",
+        "model": "500+ keyboard",
+        "memory_gb": 16,
+        "price_usd": 410.0,
+        "source": "https://www.canakit.com/raspberry-pi-500-plus.html https://www.raspberrypi.com/products/raspberry-pi-500-plus/ https://www.raspberrypi.com/news/introducing-raspberry-pi-5/"
+      }
+    ],
+    "rejected": [
+      {
+        "candidate": "NVIDIA Jetson AGX Xavier 32GB module 900-82888-0040-000",
+        "url": "https://www.ebay.com/itm/407161802298",
+        "reason": "Seller description states both 16 GB and 32GB 256-bit LPDDR4x; unresolved memory contradiction (USD 600, seller feedback 16, 94.4%). The 32GB AGX Xavier configuration is covered by the dev kit instead."
+      },
+      {
+        "candidate": "NVIDIA Jetson Orin NX 8GB module 900-13767-0010-000",
+        "url": "https://www.ebay.com/itm/167945603689",
+        "reason": "Priced in CAD (C $1,689.99) from Ottawa, Canada; not a USD offer. No US-located Orin NX 8GB module found; Arrow lists the part obsolete and SabrePC out of stock."
+      },
+      {
+        "candidate": "ASUS PE1100N Jetson Orin Nano 4GB system 90AE0191-M00310",
+        "url": "https://www.ebay.com/itm/237036261973",
+        "reason": "Title MPN 90AE0191-M00310 contradicts item-specifics MPN 90AE0191-M002H0, and specifics give LPDDR4 memory while Orin Nano uses LPDDR5."
+      },
+      {
+        "candidate": "Raspberry Pi 5 2GB (Adafruit 6007 / PiShop / SparkFun)",
+        "url": "https://www.adafruit.com/product/6007",
+        "reason": "Adafruit and PiShop US schema OutOfStock; SparkFun DEV-26125 Backorder. CanaKit offer used instead."
+      },
+      {
+        "candidate": "Raspberry Pi 4B 2GB (Adafruit 4292)",
+        "url": "https://www.adafruit.com/product/4292",
+        "reason": "Schema OutOfStock; PiShop US offer used instead."
+      },
+      {
+        "candidate": "Raspberry Pi 500+ 16GB (Adafruit 6416)",
+        "url": "https://www.adafruit.com/product/6416",
+        "reason": "Notify Me / out of stock; CanaKit offer used instead."
+      },
+      {
+        "candidate": "Radxa ROCK 5B+ (all RAM variants) and ROCK 5B at ARACE",
+        "url": "https://arace.tech/products/radxa-rock-5b-plus",
+        "reason": "Shopify variant JSON reports available=false for every RAM variant (4-32GB) on 2026-11-09."
+      },
+      {
+        "candidate": "Radxa Orion O6 64GB (revive) at ARACE",
+        "url": "https://arace.tech/products/radxa-orion-o6",
+        "reason": "Variant RS600-D64H1M0W0 USD 476.90 available=false; all Orion O6 variants unavailable."
+      },
+      {
+        "candidate": "Orange Pi 5 Plus / Radxa ROCK 5B on eBay US",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=orange+pi+5+plus&LH_BIN=1&LH_ItemCondition=1000",
+        "reason": "New Buy It Now searches returned only accessories; only a Japan-shipped ROCK 5B 4GB (USD 298.92 + 80) and a USD 488 ROCK 5C (RK3588S2) appeared; not pursued."
+      },
+      {
+        "candidate": "NVIDIA Jetson AGX Thor dev kit at SabrePC",
+        "url": "https://www.sabrepc.com/945-14070-0080-000-NVIDIA-S104023743",
+        "reason": "Search result reported USD 3,988.86 Out of Stock (not opened live); eBay offer used."
+      }
+    ],
+    "open_questions": {
+      "Milk-V Jupiter NX": "milkv.io lists 2.0 TOPS without a data type, so TOPS stays empty. Banana Pi's SpacemiT K1 datasheet gives 32-bit LPDDR4X-2666 (about 10.7 GBps), which conflicts with the recorded 34.1 GBps; recheck."
+    }
   }
 }
