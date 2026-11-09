@@ -32,6 +32,17 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
 - Ranked metrics, category tables and worksheet columns are declared once in `METRICS`, `CATEGORIES` and `SHEETS` in
   [scripts/build_readme.py](../scripts/build_readme.py).
 
+## Sources
+
+- Every ranked row needs the live offer URL and at least one specification URL that states its capacity,
+  bandwidth inputs or exact SKU. Prefer vendor product pages, datasheets and QuickSpecs. Use a parts database or
+  marketplace spec listing only for discontinued parts with no vendor page, such as older server RDIMMs.
+- Tested 2026-11-08: AMD per-SKU CPU specs for older parts live under
+  `amd.com/en/support/downloads/drivers.html/processors/...`; the former product URLs return 404 and
+  `/en/products/cpu/<sku>` redirects to a generic table. amd.com, hpe.com and crucial.com often time out or reject
+  automated fetches; a browser or `curl` with a browser user agent works. eBay, Newegg and Intel return 403 to plain
+  HTTP checks, so a 403 is not evidence of a dead link.
+
 ## Compute (TOPS)
 
 - `tops` is dense peak throughput in TOPS (TFLOPS for floating-point types) for the fastest natively supported
