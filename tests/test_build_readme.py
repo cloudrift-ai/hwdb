@@ -70,7 +70,10 @@ class RankingTests(unittest.TestCase):
                       "[source2](<https://example.com/p>)</details>", text)
 
     def test_long_names_collapse_at_a_word_boundary(self):
+        self.assertIn("<summary>Supermicro SYS-6019U-TN4R4…</summary>",
+                      build_readme.name_cell("Supermicro SYS-6019U-TN4R4T 2x Gold 5118 256GB (8x32GB)"))
         self.assertEqual(build_readme.name_cell("Short name"), "Short name")
+        self.assertEqual(build_readme.name_cell("Crucial Pro CP2K16G4DFRA32A"), "Crucial Pro CP2K16G4DFRA32A")
         self.assertEqual(build_readme.name_cell("Corsair Vengeance LPX CMK32GX4M2E3200C16"),
                          "<details><summary>Corsair Vengeance LPX…</summary>"
                          "Corsair Vengeance LPX CMK32GX4M2E3200C16</details>")

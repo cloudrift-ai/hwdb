@@ -271,7 +271,7 @@ def dollars(value):
     return f"${Decimal(str(value)).quantize(Decimal(1), ROUND_HALF_UP):,}"
 
 
-NAME_WIDTH = 32  # longer option names collapse so each table row stays about one line on GitHub
+NAME_WIDTH = 27  # longer option names collapse so each table row stays about one line on GitHub
 
 
 def collapsible(summary, body):
@@ -282,7 +282,8 @@ def name_cell(name):
     if len(name) <= NAME_WIDTH:
         return escape(name)
     head = name[:NAME_WIDTH - 1]
-    head = head.rsplit(" ", 1)[0] if " " in head else head
+    words = head.rsplit(" ", 1)[0]
+    head = words if len(words) >= NAME_WIDTH * 3 // 4 else head  # prefer a word boundary unless it drops too much
     return collapsible(f"{escape(head)}…", escape(name))
 
 
