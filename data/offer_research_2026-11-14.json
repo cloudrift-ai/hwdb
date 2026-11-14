@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-14 offer research: add AMD Radeon AI PRO R9700 32GB (new and used) and test Amazon and Micro Center retrieval",
+  "scope": "2026-11-14 offer research: add AMD Radeon AI PRO R9700 32GB (new and used) and test Amazon and Micro Center retrieval; then fill missing new 32GB discrete GPUs (W6800, W7800 32GB, RTX PRO 4500, RTX 5000 Ada, Arc Pro B70, R9700S)",
   "price_date_timezone": "UTC",
   "observation_window": "2026-11-14T01:50Z to 2026-11-14T02:05Z",
   "specification": {
@@ -34,13 +34,66 @@
     }
   ],
   "other_offers_seen": [
-    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814202462?Item=9SIBW6VMAD0749", "board": "Sapphire 32358-01-20G", "seller": "Best IT Hub", "price_usd": 2295.99, "status": "In stock, AddToCartType 0"},
-    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814202462?Item=9SIA0ZXKPX2046", "board": "Sapphire 32358-01-20G", "seller": "BeachAudio", "price_usd": 2307.32, "status": "MoreBuyingOptions: in stock, AddToCartType 0"},
-    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814126826?Item=9SIBKFRM5Y1890", "board": "ASUS TURBO-AI-PRO-R9700-32G", "seller": "Halfmoon Tech Store", "price_usd": 2599.99, "status": "In stock, AddToCartType 0"},
-    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814131885?Item=9SIBP4YMA04501", "board": "PowerColor AI PRO R9700 32G-B", "seller": "TECH EDGE", "price_usd": 3699.99, "status": "In stock; ships from China"},
-    {"condition": "new", "store": "eBay", "url": "https://www.ebay.com/itm/128183680667", "board": "Gigabyte AI TOP", "price_usd": 2399.95, "status": "Lowest New Buy It Now search card; not item-verified"},
-    {"condition": "used", "store": "eBay", "url": "https://www.ebay.com/itm/960176410208", "board": "Gigabyte AI TOP", "price_usd": 2315.28, "status": "Search card only; USD 8.20 delivery"},
-    {"condition": "used", "store": "eBay", "url": "https://www.ebay.com/itm/960177082848", "board": "Sapphire", "price_usd": 2430.0, "status": "Search card only"}
+    {
+      "condition": "new",
+      "store": "Newegg",
+      "url": "https://www.newegg.com/p/N82E16814202462?Item=9SIBW6VMAD0749",
+      "board": "Sapphire 32358-01-20G",
+      "seller": "Best IT Hub",
+      "price_usd": 2295.99,
+      "status": "In stock, AddToCartType 0"
+    },
+    {
+      "condition": "new",
+      "store": "Newegg",
+      "url": "https://www.newegg.com/p/N82E16814202462?Item=9SIA0ZXKPX2046",
+      "board": "Sapphire 32358-01-20G",
+      "seller": "BeachAudio",
+      "price_usd": 2307.32,
+      "status": "MoreBuyingOptions: in stock, AddToCartType 0"
+    },
+    {
+      "condition": "new",
+      "store": "Newegg",
+      "url": "https://www.newegg.com/p/N82E16814126826?Item=9SIBKFRM5Y1890",
+      "board": "ASUS TURBO-AI-PRO-R9700-32G",
+      "seller": "Halfmoon Tech Store",
+      "price_usd": 2599.99,
+      "status": "In stock, AddToCartType 0"
+    },
+    {
+      "condition": "new",
+      "store": "Newegg",
+      "url": "https://www.newegg.com/p/N82E16814131885?Item=9SIBP4YMA04501",
+      "board": "PowerColor AI PRO R9700 32G-B",
+      "seller": "TECH EDGE",
+      "price_usd": 3699.99,
+      "status": "In stock; ships from China"
+    },
+    {
+      "condition": "new",
+      "store": "eBay",
+      "url": "https://www.ebay.com/itm/128183680667",
+      "board": "Gigabyte AI TOP",
+      "price_usd": 2399.95,
+      "status": "Lowest New Buy It Now search card; not item-verified"
+    },
+    {
+      "condition": "used",
+      "store": "eBay",
+      "url": "https://www.ebay.com/itm/960176410208",
+      "board": "Gigabyte AI TOP",
+      "price_usd": 2315.28,
+      "status": "Search card only; USD 8.20 delivery"
+    },
+    {
+      "condition": "used",
+      "store": "eBay",
+      "url": "https://www.ebay.com/itm/960177082848",
+      "board": "Sapphire",
+      "price_usd": 2430.0,
+      "status": "Search card only"
+    }
   ],
   "rejected": [
     {
@@ -64,5 +117,79 @@
     "Amazon and Micro Center could not be read; their offers were not compared",
     "Single asking offers, not market medians; current street prices are about 1.6-1.8x the USD 1299 launch MSRP",
     "Price dates use the UTC date of observation (2026-11-14), which is 2026-11-13 in US Pacific time"
-  ]
+  ],
+  "new_32gb_gpus": {
+    "observation_window": "2026-11-14T02:03Z to 2026-11-14T02:15Z",
+    "accepted": [
+      {
+        "model": "AMD Radeon PRO W6800 32GB",
+        "price_usd": 879.0,
+        "url": "https://www.ebay.com/itm/336783249782",
+        "seller": "WorldTalker (11 feedback, China)",
+        "shipping_usd": 50.0,
+        "observation": "US $879.00, New, 2 available, InStock, Buy It Now active, no banner",
+        "spec": "https://www.amd.com/en/products/graphics/workstations/radeon-pro/w6800.html"
+      },
+      {
+        "model": "AMD Radeon PRO W7800 32GB",
+        "price_usd": 2370.41,
+        "url": "https://www.newegg.com/p/N82E16814105115?Item=9SIA24GKAP2001",
+        "seller": "antonline",
+        "shipping_usd": 0,
+        "observation": "USD 2370.41, Instock true, AddToCartType 0, free delivery to 95052",
+        "spec": "https://www.amd.com/en/products/graphics/workstations/radeon-pro/w7800.html"
+      },
+      {
+        "model": "NVIDIA RTX PRO 4500 Blackwell 32GB",
+        "price_usd": 4399.0,
+        "url": "https://www.ebay.com/itm/278406376249",
+        "seller": "ThinkPad-Dell-ASUS-ACER Compters (9783 feedback, Houston TX)",
+        "shipping_usd": 0,
+        "observation": "US $4,399.00, New (OEM), 7 available, InStock, Buy It Now active",
+        "spec": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-4500-blackwell/workstation-datasheet-blackwell-rtx-pro-4500-we-nvidia-us-5108623-web.pdf"
+      },
+      {
+        "model": "NVIDIA RTX 5000 Ada 32GB",
+        "price_usd": 6049.0,
+        "url": "https://www.newegg.com/p/N82E16814133862?Item=9SIATRNKGS4778",
+        "seller": "High Performance Tech",
+        "shipping_usd": 0,
+        "observation": "PNY VCNRTX5000ADA-PB, USD 6049.00, Instock true, AddToCartType 0",
+        "spec": "https://cdn.pathfactory.com/assets/10412/contents/1095460/b57d512c-c1b8-4fea-b9e5-cb95bcb33c44.pdf"
+      },
+      {
+        "model": "Intel Arc Pro B70 32GB",
+        "price_usd": 1799.99,
+        "url": "https://www.ebay.com/itm/920131602590",
+        "seller": "rttradinginc (147 feedback, Redding CA)",
+        "shipping_usd": 0,
+        "observation": "ASRock B70CT32G, US $1,799.99, New, InStock, Buy It Now active, free 2-4 day delivery to 95050",
+        "spec": "https://www.intel.com/content/www/us/en/products/sku/245797/intel-arc-pro-b70-graphics/specifications.html"
+      }
+    ],
+    "rejected": [
+      {
+        "url": "https://www.ebay.com/itm/366778959615",
+        "reason": "RTX 5000 Ada listed in EUR 4,899 by a German seller; eBay's USD figure is a conversion, not a USD asking price"
+      },
+      {
+        "url": "https://www.ebay.com/itm/336838280647",
+        "reason": "RTX 5000 Ada (HP 8D6B6AA) listed in EUR 4,990 from Germany with EUR 199.90 shipping"
+      },
+      {
+        "url": "https://www.ebay.com/sch/i.html?_nkw=radeon+ai+pro+r9700s&_sacat=27386&LH_BIN=1&LH_ItemCondition=1000",
+        "reason": "Radeon AI PRO R9700S: zero New Buy It Now results; not searched further (mainly sold in servers)"
+      },
+      {
+        "url": "https://www.newegg.com/p/pl?d=arc+pro+b70&Order=1",
+        "reason": "Search cards' lower 'More options from' figures (W7800 USD 2330.99, RTX 5000 Ada USD 4589.95, Intel B70 USD 1699.99) did not match any MoreBuyingOptions new offer"
+      }
+    ],
+    "not_ranked_in_top_ten": "RTX PRO 4500 (0.0073 GB/$) and RTX 5000 Ada (0.0053 GB/$) are recorded but fall below the new VRAM top-ten cutoff (0.0135); RTX 5090 and RTX PRO 6000 also dropped out",
+    "limitations": [
+      "Only eBay and Newegg searched; Amazon and Micro Center remain blocked",
+      "W6800 offer is from a low-feedback seller shipping from China",
+      "Single asking offers, not market medians"
+    ]
+  }
 }
