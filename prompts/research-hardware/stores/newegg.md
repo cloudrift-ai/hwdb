@@ -37,3 +37,7 @@ Only 0 is eligible. `ShippingCharge` 0.01 renders as Free. Other sellers of a pr
 `/product/api/MoreBuyingOptions?ParentItem=<parent>&TabType=<0 all|1 new|2 used>&MappingId=<id>&PageNum=N&PageSize=5`
 (MappingId from `__initialState__`); item price there is `UnitCost - InstantRebateAmount`. Search pages render
 client-side, so read them from an open tab. Raw HTML contains an "out of stock" string even when in stock.
+Tested 2026-11-14: `MoreBuyingOptions` needs the dashed `ParentItem` form from `__initialState__` (for example
+`14-202-462`); the `N82E…` form returns zero items. `MappingId` "0" works with the dashed form. Search cards'
+"More options from $X" can quote a lower figure than any offer the API lists (an R9700 card said $1,799.99 while
+every listed offer was $2,295.99 or more); never record that figure without a matching selectable offer.

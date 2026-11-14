@@ -1,0 +1,68 @@
+{
+  "scope": "2026-11-14 offer research: add AMD Radeon AI PRO R9700 32GB (new and used) and test Amazon and Micro Center retrieval",
+  "price_date_timezone": "UTC",
+  "observation_window": "2026-11-14T01:50Z to 2026-11-14T02:05Z",
+  "specification": {
+    "url": "https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html",
+    "memory_gb": 32,
+    "memory": "GDDR6, 256-bit, 20 Gbps",
+    "bandwidth_gbs": 640,
+    "tops": 766,
+    "tops_type": "INT4",
+    "tops_basis": "AMD-listed dense INT4 matrix 766 TOPS; 1531 TOPS with structured sparsity. Dense INT8/FP8 383, FP16 matrix 191."
+  },
+  "accepted": [
+    {
+      "condition": "new",
+      "model": "Radeon AI PRO R9700",
+      "priced_board": "GIGABYTE GV-R9700AI TOP-32GD",
+      "price_usd": 2279.99,
+      "url": "https://www.newegg.com/p/N82E16814932822?Item=N82E16814932822",
+      "seller": "Newegg (sold and shipped by Newegg)",
+      "shipping_usd": 0,
+      "observation": "Live item page: USD 2279.99, Instock true, Active 1, AddToCartType 0, Add to cart visible, free standard delivery to Santa Clara 95052"
+    },
+    {
+      "condition": "used",
+      "model": "Radeon AI PRO R9700",
+      "priced_board": "PowerColor AIPROR970032G-B",
+      "price_usd": 2099.0,
+      "url": "https://www.ebay.com/itm/168857637664",
+      "seller": "slumsy (156 feedback, 100% positive)",
+      "shipping_usd": 0,
+      "observation": "Live item page: US $2,099.00, Used, schema InStock, Buy It Now active, no status banner, free USPS Ground Advantage from Los Angeles; description: GPU and power adapter only, discloses coil whine"
+    }
+  ],
+  "other_offers_seen": [
+    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814202462?Item=9SIBW6VMAD0749", "board": "Sapphire 32358-01-20G", "seller": "Best IT Hub", "price_usd": 2295.99, "status": "In stock, AddToCartType 0"},
+    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814202462?Item=9SIA0ZXKPX2046", "board": "Sapphire 32358-01-20G", "seller": "BeachAudio", "price_usd": 2307.32, "status": "MoreBuyingOptions: in stock, AddToCartType 0"},
+    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814126826?Item=9SIBKFRM5Y1890", "board": "ASUS TURBO-AI-PRO-R9700-32G", "seller": "Halfmoon Tech Store", "price_usd": 2599.99, "status": "In stock, AddToCartType 0"},
+    {"condition": "new", "store": "Newegg", "url": "https://www.newegg.com/p/N82E16814131885?Item=9SIBP4YMA04501", "board": "PowerColor AI PRO R9700 32G-B", "seller": "TECH EDGE", "price_usd": 3699.99, "status": "In stock; ships from China"},
+    {"condition": "new", "store": "eBay", "url": "https://www.ebay.com/itm/128183680667", "board": "Gigabyte AI TOP", "price_usd": 2399.95, "status": "Lowest New Buy It Now search card; not item-verified"},
+    {"condition": "used", "store": "eBay", "url": "https://www.ebay.com/itm/960176410208", "board": "Gigabyte AI TOP", "price_usd": 2315.28, "status": "Search card only; USD 8.20 delivery"},
+    {"condition": "used", "store": "eBay", "url": "https://www.ebay.com/itm/960177082848", "board": "Sapphire", "price_usd": 2430.0, "status": "Search card only"}
+  ],
+  "rejected": [
+    {
+      "url": "https://www.newegg.com/p/pl?d=radeon+ai+pro+r9700&Order=1",
+      "reason": "Search cards showed 'More options from' USD 1799.99-2079.97, but MoreBuyingOptions (TabType 0) listed no offer below USD 2279.99; the lower figures were not attributable to a selectable new in-stock offer"
+    }
+  ],
+  "store_access": [
+    {
+      "store": "Amazon",
+      "url": "https://www.amazon.com/s?k=radeon+ai+pro+r9700+32gb&s=price-asc-rank",
+      "result": "Built-in browser received an 'Access restricted' page stating that continued access by an unauthorized AI agent violates Amazon's Conditions of Use. Not bypassed; no price, seller or stock read."
+    },
+    {
+      "store": "Micro Center",
+      "url": "https://www.microcenter.com/search/search_results.aspx?Ntt=radeon+ai+pro+r9700&sortby=pricelow",
+      "result": "Cloudflare 'Performing security verification' challenge (HTTP 403) in the built-in browser after waiting; plain curl with a browser user agent also returned 403 'Just a moment...'. Not bypassed; no price or stock read."
+    }
+  ],
+  "limitations": [
+    "Amazon and Micro Center could not be read; their offers were not compared",
+    "Single asking offers, not market medians; current street prices are about 1.6-1.8x the USD 1299 launch MSRP",
+    "Price dates use the UTC date of observation (2026-11-14), which is 2026-11-13 in US Pacific time"
+  ]
+}

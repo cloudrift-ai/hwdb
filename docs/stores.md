@@ -73,6 +73,12 @@ snapshots and exclude any separately shown shipping or tax.
   Dell technical-guide PDFs return Access Denied to plain `curl` but download through a fetch tool. Newegg's Dell
   PowerEdge pages were quote-only or out of stock.
 - Seeed product pages return a Cloudflare 403 to `curl` and its search needs JavaScript; use the browser.
+- Amazon (tested 2026-11-14): search in the built-in browser returned an "Access restricted" page stating that
+  continued access by unauthorized AI agents violates Amazon's Conditions of Use. Do not click through or work
+  around it; no price, seller or stock was read. Treat Amazon prices from third-party trackers as leads only.
+- Micro Center (tested 2026-11-14): search returned a Cloudflare security-verification challenge (HTTP 403) in the
+  built-in browser and to plain `curl` with a browser user agent. Do not attempt to pass the challenge; no price,
+  stock or store-pickup status was read.
 - B&H (Cloudflare challenge) and CDW (Akamai Access Denied) blocked the built-in browser on 2026-11-08. Newegg and
   NeweggBusiness often show high-end server CPUs and GB300 workstations with "Request a quote" only; treat those as
   quote-only, not offers.

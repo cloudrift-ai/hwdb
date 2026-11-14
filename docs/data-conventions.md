@@ -60,6 +60,8 @@ owns the details. Edit data, then run `make readme`, `make check` and `make test
 
 - Rows whose availability or price basis says out of stock, sold, ended, unavailable or discontinued are excluded
   from rankings. A missing price or metric excludes a row only from the affected table.
+- The exclusion matches whole words in `availability` and `price_basis`, so keep seller wording such as "sold by"
+  or "sold and shipped by" in notes; it would otherwise drop an in-stock row (seen 2026-11-14 with a Newegg offer).
 - Without an override, condition is `used` when the price basis says used or refurbished, otherwise `new`.
 - Rows without a verified current offer keep their historical price and date, marked
   `Unavailable: no verified current ... offer`. "No verified offer" describes the search, not worldwide stock.
